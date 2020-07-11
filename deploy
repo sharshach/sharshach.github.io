@@ -1,5 +1,7 @@
+git checkout development
 npm run deploy
 git checkout master
 git pull origin gh-pages
 git push
 git checkout development
+echo "SUCESSFULLY DEPLOYED AND CHECKEDOUT TO development"
