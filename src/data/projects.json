@@ -1,9 +1,51 @@
 [
-    {
-        "name": "VIDEO CALLING",
-        "short": "A peer to peer based Vedio calling app",
-        "date": "May 2020",
-        "description": "dfg",
-        "link": "https://github.com/sharshach/webrtc"
-    }
+  {
+    "name": "VIDEO CALLING",
+    "short": "A peer to peer based Vedio calling app",
+    "date": "April 2020",
+    "description": "dfg",
+    "link": "https://github.com/sharshach/webrtc",
+    "demo-link": "https://sharshach.github.io/webrtc",
+    "technologies": ["peerjs", "webrtc"],
+    "for": "WorkatTech"
+  },
+  {
+    "name": "Collabarative Editor",
+    "short": "A peer to peer based Collabarative Editor",
+    "date": "May 2020",
+    "description": "d",
+    "technologies": ["peerjs", "weebrtc", "CRDT"],
+    "for": "WorkatTech"
+  },
+  {
+    "name": "Area-Calculator",
+    "short": "A React-native App used to calculate approx area of a field",
+    "date": "June 2020",
+    "description": "",
+    "technologies": ["React-Native"],
+    "for": "self",
+    "link": "https://github.com/sharshach/area-calculator",
+    "demo-link": "https://github.com/sharshach/area-calculator/releases/download/1/AreaCalculator-4fb019726a9d4fde87cb0bd01e7b33c4-signed.apk"
+  },
+  {
+    "name": "Sudoko Solver",
+    "short": "A simple Sudoko Solver with C",
+    "date": "June 2019"
+  },
+  {
+    "name": "Green Mat",
+    "short": "A python App to replace background of images",
+    "date": "June 2020",
+    "link": "https://github.com/sharshach/GreenMat",
+    "technologies": ["python", "open-cv"]
+  },
+  {
+    "name": "NITDGP DEMO website",
+    "short": "A (un-official) website of NITDGP",
+    "link": "https://github.com/sharshach/nitdgp-demo",
+    "demo-link": "https://sharshach.github.io/nitdgp-demo",
+    "date": "March 2019",
+    "technologies": ["html", "css", "bootstrap", "js", "gsap"],
+    "for": "self"
+  }
 ]
