@@ -12,6 +12,7 @@ export default class Project extends React.Component {
             projects.map(project => {
                 return (
                     <div>
+                        
                         <h1>{project.name}</h1>
                         <h2>{project.date}</h2>
                     </div>
