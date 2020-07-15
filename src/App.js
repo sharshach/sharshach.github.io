@@ -3,7 +3,7 @@ import "./App.css";
 import Projects from "./components/Projects/Projects";
 import Jobs from "./components/Jobs/Jobs";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact"
 
 const App = (_props) => (
   <div className="App">
@@ -12,7 +12,9 @@ const App = (_props) => (
         <Jobs />
         <Projects />
         </div>
-    <Footer />
+        <div class="contact-right" >
+            <Contact/>
+        </div>
   </div>
 );
 

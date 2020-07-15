@@ -1,4 +1,18 @@
 .contact-col {
   width: 100px;
-  float: right;
+  float: top;
+}
+.fa {
+  padding: 12px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border-radius: 100px;
+  transform: scale(0.9);
+}
+.fa:hover {
+  transform: scale(1.1);
 }

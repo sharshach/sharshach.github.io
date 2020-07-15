@@ -6,3 +6,8 @@
   overflow: hidden;
   overflow-y: hidden;
 }
+.contact-right {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}

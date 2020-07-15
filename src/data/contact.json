@@ -1,14 +1,40 @@
 [
-    {
-        "name": "Whatsapp",
-        "link": "https://wa.me/+917013765669"
-    },
-    {
-        "name": "mobile",
-        "link": "tel:+917013765669"
-    },
-    {
-        "name": "mail",
-        "link": "mailto:sharshach@gmail.com"
-    }
+  {
+    "name": "Whatsapp",
+    "link": "https://wa.me/+917013765669",
+    "class": "fa fa-whatsapp w3-xxlarge",
+    "background": "rgb(76, 237, 105)"
+  },
+  {
+    "name": "mobile",
+    "link": "tel:+917013765669",
+    "class": "fa fa-phone w3-xxlarge",
+    "background": "#ff9100"
+  },
+  {
+    "name": "mail",
+    "link": "mailto:sharshach@gmail.com",
+    "class": "fa fa-envelope w3-xxlarge",
+    "background": "#dc4a3e"
+  },
+  {
+    "name": "instagram",
+    "link:": "https://www.instagram.com/chilukuri_sri_harsha/",
+    "class": "fa fa-instagram w3-xxlarge",
+    "background": "#d643c8",
+    "color": "white"
+  },
+  {
+    "name": "github",
+    "link": "https://github.com/sharshach",
+    "class": "fa fa-github w3-xxlarge",
+    "background": "black",
+    "color": "white"
+  },
+  {
+    "name": "linkedin",
+    "link": "https://www.linkedin.com/in/sharshach",
+    "class": "fa fa-linkedin w3-xxlarge",
+    "background": "#0077b5"
+  }
 ]

@@ -12,7 +12,7 @@ export default class Contact extends React.Component {
     return contacts ? (
       contacts.map((contact) => (
         <div class="contact-col">
-          <a href={contact.link}>{contact.name}</a>
+              <a href={contact.link}><i class={contact.class} style={{background:contact.background,color:contact.color}}></i></a>
         </div>
       ))
     ) : (
