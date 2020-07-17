@@ -10,29 +10,29 @@ export default class Jobs extends React.Component {
 
   render() {
     return jobs ? (
-      <div class="job-row">
+      <div className="job-row">
         {jobs.map(job => (
-          <div class="job-col">
-            <div class="job-top">
-              <div class="logo-div">
-                <img class="logo-img" src={job.logo} alt={job.code} />
+          <div className="job-col" key={job.name}>
+            <div className="job-top">
+              <div className="logo-div">
+                <img className="logo-img" src={job.logo} alt={job.code} />
               </div>
-              <div class="name">{job.name}</div>
-              <div class="type">{job.type}</div>
-              <div class="tag">{job.tag}</div>
+              <div className="name">{job.name}</div>
+              <div className="type">{job.type}</div>
+              <div className="tag">{job.tag}</div>
             </div>
-            <div class="role">
+            <div className="role">
               {job.role.map((role) => (
-                <div>
-                  <p class="role-name">{role.name}</p>
-                  <p class="role-date">
+                <div key={role.name}>
+                  <p className="role-name">{role.name}</p>
+                  <p className="role-date">
                     {role.start} - {role.end ? role.end : "Present"}{" "}
                   </p>
                 </div>
               ))}
             </div>
-            <p class="webite">{job.website}</p>
-            <p class="locality">{job.locality}</p>
+            <p className="webite">{job.website}</p>
+            <p className="locality">{job.locality}</p>
           </div>
         ))}
       </div>

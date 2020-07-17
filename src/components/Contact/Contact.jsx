@@ -10,9 +10,9 @@ export default class Contact extends React.Component {
 
   render() {
     return contacts ? (
-      contacts.map((contact) => (
-        <div class="contact-col">
-              <a href={contact.link}><i class={contact.class} style={{background:contact.background,color:contact.color}}></i></a>
+      contacts.map(contact => (
+        <div className="contact-col" key={contact.name}>
+              <a href={contact.link}><i className={contact.class} style={{background:contact.background,color:contact.color}}></i></a>
         </div>
       ))
     ) : (

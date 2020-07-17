@@ -10,14 +10,14 @@ export default class Projects extends React.Component {
 
     render() {
         return projects ? (
-          <div class="proj-main">
+          <div className="proj-main">
             {projects.map(project => (
-              <div class="col">
-                <div class="proj-top">
-                        <div class="proj-name">{project.name}</div>
-                        <div class="proj-short">{project.short}</div>
+              <div className="col" key={project.name}>
+                <div className="proj-top">
+                        <div className="proj-name">{project.name}</div>
+                        <div className="proj-short">{project.short}</div>
                 </div>
-                <div class="proj-date">{project.date}</div>
+                <div className="proj-date">{project.date}</div>
               </div>
             ))}
           </div>
