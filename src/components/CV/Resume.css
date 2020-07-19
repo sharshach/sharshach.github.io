@@ -1,0 +1,39 @@
+.resume-main {
+  float: left;
+  width: 100%;
+  height: 500px;
+  border-radius: 50px;
+  background-color: rgb(250, 202, 140);
+  border: 1px solid red;
+  transform: scale(0.98);
+}
+.resume-link {
+  background-color: aquamarine;
+  font-size: 40;
+  border-radius: 50px;
+  padding: 10px;
+  position: relative;
+  top: 20%;
+}
+.resume-iframe {
+  width: 40%;
+  height: 90vh;
+  float: left;
+  padding: 2%;
+  border: hidden;
+}
+.resume-heading {
+  float: left;
+  width: 100%;
+  height: 20%;
+  background-color: aqua;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  font-size: 40px;
+}
+@media only screen and (max-width: 900px) {
+  .resume-iframe {
+    width: 80%;
+    height: 80vh;
+  }
+}

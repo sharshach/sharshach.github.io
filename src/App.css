@@ -6,8 +6,26 @@
   overflow: hidden;
   overflow-y: hidden;
 }
-.contact-right {
+.right-block {
   position: fixed;
   bottom: 0px;
   right: 0px;
+}
+.left-block {
+  width: 95%;
+  float: left;
+}
+@media only screen and (max-width: 600px) {
+  .right-block {
+    position: fixed;
+    bottom: 0px;
+  }
+  .left-block {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .job-col {
+    width: 50%;
+  }
 }

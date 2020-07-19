@@ -1,6 +1,12 @@
 .contact-col {
-  width: 100px;
+  width: 100%;
   float: top;
+}
+@media only screen and (max-width: 600px) {
+  .contact-col {
+    width: 55px;
+    float: left;
+  }
 }
 .fa {
   padding: 12px;

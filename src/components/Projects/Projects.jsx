@@ -12,7 +12,7 @@ export default class Projects extends React.Component {
         return projects ? (
           <div className="proj-main">
             {projects.map(project => (
-              <div className="col" key={project.name}>
+              <div className="proj-col" key={project.name}>
                 <div className="proj-top">
                         <div className="proj-name">{project.name}</div>
                         <div className="proj-short">{project.short}</div>
