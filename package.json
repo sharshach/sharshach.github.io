@@ -4,6 +4,7 @@
     "homepage": "https://sharshach.github.io",
     "private": true,
     "dependencies": {
+        "@material/react-card": "^0.15.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-scripts": "0.9.5"

@@ -1,6 +1,7 @@
 import React from "react";
 import projects from "../../data/projects.json";
 import './Projects.css';
+import Project from './Project'
 
 export default class Projects extends React.Component {
   constructor(props) {
@@ -10,15 +11,9 @@ export default class Projects extends React.Component {
 
     render() {
         return projects ? (
-          <div className="proj-main">
+          <div className="projects-main">
             {projects.map(project => (
-              <div className="proj-col" key={project.name}>
-                <div className="proj-top">
-                        <div className="proj-name">{project.name}</div>
-                        <div className="proj-short">{project.short}</div>
-                </div>
-                <div className="proj-date">{project.date}</div>
-              </div>
+              <Project data={project}/>
             ))}
           </div>
         ) : (
