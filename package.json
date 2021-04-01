@@ -4,6 +4,7 @@
     "homepage": "https://sharshach.github.io",
     "private": true,
     "dependencies": {
+        "@journey-cp/eslint-config": "0.0.5",
         "@material/react-card": "^0.15.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
@@ -19,5 +20,12 @@
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+          "react-app",
+          "react-app/jest",
+          "@journey-cp"
+        ]
     }
 }
