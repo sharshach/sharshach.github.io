@@ -1,0 +1,24 @@
+.github-stats{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #121218;
+    background-image: linear-gradient( #222222 , #111111);
+    color: white;
+}
+.github-stats-left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+.github-stats-right{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
