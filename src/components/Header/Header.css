@@ -54,3 +54,28 @@
   text-decoration: underline blue 5px;
   text-underline-offset: 5px;
 }
+.terminal{
+  background-color: #321127;
+  height: 500px;
+  width: 800px;
+  margin:10px;
+  text-align: left;
+  font-size: 17px;
+  font-family: monospace;
+  border: solid 1px #555555;
+  padding: 2px 5px;
+}
+.terminal-line,
+.terminal-left-line{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.terminal-name{
+  color:#77c430;
+  font-weight: bold;
+}
+.terminal-path{
+  color:#2e78fb;
+  font-weight: bold;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import "./Header.css"
 import "../style.css"
 import Navigation from './Navigation';
+import Terminal from './Terminal';
 export default class Header extends React.Component{
     constructor(props) {
         super(props);
@@ -10,9 +11,9 @@ export default class Header extends React.Component{
             y:0,
         };
     }
-    componentDidMount(){
-        setInterval(this.moveStar, 1);
-    }
+    // componentDidMount(){
+    //     setInterval(this.moveStar, 1);
+    // }
     moveStar=()=>{
         const {x,y}=this.state;
         this.setState({x:(x+Math.random()-0.5)%100,y:(y+Math.random()-0.5)%100});
@@ -33,11 +34,15 @@ export default class Header extends React.Component{
                 <Navigation/>
 
                 <div className="my-heading">Chilukuri Sri Harsha</div>
-                <div className="header-dot" style={{left:`${(125+this.state.x)%100}vw`,top:`${(175+this.state.y)%100}vh`}}/>
+                
+                <center>
+                    <Terminal/>
+                </center>
+                {/* <div className="header-dot" style={{left:`${(125+this.state.x)%100}vw`,top:`${(175+this.state.y)%100}vh`}}/>
                 <div className="header-dot" style={{left:`${(175+this.state.x)%100}vw`,top:`${(175+this.state.y)%100}vh`}}/>
                 <div className="header-dot" style={{left:`${(175+this.state.x)%100}vw`,top:`${(125+this.state.y)%100}vh`}}/>
                 <div className="header-dot" style={{left:`${(125+this.state.x)%100}vw`,top:`${(125+this.state.y)%100}vh`}}/>
-                <div className="header-dot" style={{left:`${(150+this.state.x)%100}vw`,top:`${(150+this.state.y)%100}vh`}}/>
+                <div className="header-dot" style={{left:`${(150+this.state.x)%100}vw`,top:`${(150+this.state.y)%100}vh`}}/> */}
             </div>
         )
     }
