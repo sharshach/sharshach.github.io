@@ -1,4 +1,11 @@
+.jobs{
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient( #222222 , #111111);
+}
 .job-col {
+  margin: 10px;
   float: left;
   width: 33%;
   height: 450px;

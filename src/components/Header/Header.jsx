@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Header.css"
-
+import "../style.css"
 export default class Header extends React.Component{
     constructor(props) {
         super(props);
@@ -29,9 +29,12 @@ export default class Header extends React.Component{
                 <div className="header-tile">Projects</div>
                 <div className="header-tile">Projects</div>
                 </div> */}
-              
-                <div className="header-dot" style={{left:`${this.state.x}vw`,top:`${this.state.y}vh`}}/>
-                <div className="header-dot" style={{left:`${this.state.x}vw`,top:`${this.state.y}vh`}}/>
+                <div className="my-heading">Chilukuri Sri Harsha</div>
+                <div className="header-dot" style={{left:`${(125+this.state.x)%100}vw`,top:`${(175+this.state.y)%100}vh`}}/>
+                <div className="header-dot" style={{left:`${(175+this.state.x)%100}vw`,top:`${(175+this.state.y)%100}vh`}}/>
+                <div className="header-dot" style={{left:`${(175+this.state.x)%100}vw`,top:`${(125+this.state.y)%100}vh`}}/>
+                <div className="header-dot" style={{left:`${(125+this.state.x)%100}vw`,top:`${(125+this.state.y)%100}vh`}}/>
+                <div className="header-dot" style={{left:`${(150+this.state.x)%100}vw`,top:`${(150+this.state.y)%100}vh`}}/>
             </div>
         )
     }
