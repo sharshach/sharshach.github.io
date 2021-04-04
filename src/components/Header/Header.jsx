@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Header.css"
 import "../style.css"
+import Navigation from './Navigation';
 export default class Header extends React.Component{
     constructor(props) {
         super(props);
@@ -29,6 +30,8 @@ export default class Header extends React.Component{
                 <div className="header-tile">Projects</div>
                 <div className="header-tile">Projects</div>
                 </div> */}
+                <Navigation/>
+
                 <div className="my-heading">Chilukuri Sri Harsha</div>
                 <div className="header-dot" style={{left:`${(125+this.state.x)%100}vw`,top:`${(175+this.state.y)%100}vh`}}/>
                 <div className="header-dot" style={{left:`${(175+this.state.x)%100}vw`,top:`${(175+this.state.y)%100}vh`}}/>

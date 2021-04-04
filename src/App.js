@@ -10,9 +10,9 @@ import GithubStats from "./components/Github/GithubStats";
 const App = (_props) => (
   <div className="App">
     <Header />
-    <div className="left-block">
-            <Jobs />
-            <GithubStats/>
+  <div className="left-block">
+            <div id="jobs"><Jobs /></div>
+            <div  id="github"><GithubStats /></div>
             {/* <div className="app-projects">
                 <Projects />
             </div> */}

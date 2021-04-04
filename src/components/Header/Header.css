@@ -34,3 +34,23 @@
   border-radius: 100%;
   position: absolute;
 }
+.navigation-link{
+  margin:10px;
+  text-decoration: none;
+}
+.navigation{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  /* opacity:0px; */
+  top: 10px;
+  min-height: 50px;
+  font-size: 20px;
+}
+/* .navigation */
+.navigation-link:hover{
+  text-decoration: underline blue 5px;
+  text-underline-offset: 5px;
+}
