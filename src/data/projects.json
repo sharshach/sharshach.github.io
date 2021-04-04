@@ -1,7 +1,7 @@
 [
   {
     "name": "VIDEO CALLING",
-    "short": "A peer to peer based Vedio calling app",
+    "short": "A peer to peer based Video calling app",
     "date": "April 2020",
     "description": "dfg",
     "link": "https://github.com/sharshach/webrtc",
@@ -14,14 +14,14 @@
     "short": "A peer to peer based Collabarative Editor",
     "date": "May 2020",
     "description": "d",
-    "technologies": ["peerjs", "weebrtc", "CRDT"],
+    "technologies": ["peerjs", "webrtc", "CRDT"],
     "for": "WorkatTech"
   },
   {
     "name": "Area-Calculator",
     "short": "A React-native App used to calculate approx area of a field",
     "date": "June 2020",
-    "description": "",
+    "description": "A React-native App used to calculate approx area of a fieldA React-native App used to calculate approx area of a fieldA React-native App used to calculate approx area of a fieldA React-native App used to calculate approx area of a fieldA React-native App used to calculate approx area of a fieldA React-native App used to calculate approx area of a fieldA React-native App used to calculate approx area of a field",
     "technologies": ["React-Native"],
     "for": "self",
     "link": "https://github.com/sharshach/area-calculator",

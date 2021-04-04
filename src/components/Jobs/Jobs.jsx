@@ -1,6 +1,7 @@
 import React from "react";
 import jobs from "../../data/jobs.json";
 import "./jobs.css";
+import "../style.css";
 
 export default class Jobs extends React.Component {
   constructor(props) {
@@ -10,7 +11,9 @@ export default class Jobs extends React.Component {
 
   render() {
     return jobs ? (
-      <div className="job-row">
+      <div className="jobs">
+      <div className="my-heading">Projects</div>
+      <div className="jobs-list">
         {jobs.map(job => (
           <div className="job-col" key={job.name}>
             <div className="job-top">
@@ -35,6 +38,7 @@ export default class Jobs extends React.Component {
             <p className="locality">{job.locality}</p>
           </div>
         ))}
+        </div>
       </div>
     ) : (
       <div />

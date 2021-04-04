@@ -22,3 +22,22 @@
 .fa:hover {
   transform: scale(1.1);
 }
+.show-hide-contacts-button{
+  padding: 12px;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border-radius: 100%;
+  border: none;
+  transform: scale(0.9);
+  padding: 0px 20px;
+}
+.show-hide-contacts-button:focus{
+  outline: none;
+}
