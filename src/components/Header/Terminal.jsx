@@ -8,12 +8,18 @@ export default class Terminal extends Component {
         this.state = {
             content:[[true,""]],
             fullContent:[
-                [true,"name"],
+                [true,"whoami"],
                 [false,"Chilukuri Sri Harsha"],
-                [true,"location"],
+                [true,"whereami"],
                 [false,"Nagandla, Inkollu, Andhra Pradesh, India"],
                 [true,"study"],
                 [false,"National Institute of Technology, Durgapur"],
+                [true,"projects"],
+                [false,"I worked in several projects personally and in teams <a href='#github'>click here to view my projects</a>"],
+                [true,"experience"],
+                [false,"Currently I am working in work@tech. <a href='#github'>click here to view my Experiences</a>"],
+                [true,"contact"],
+                [false,"Contact Me through <a href='mailto:sharshach@gmail.com'>mail(click here)</a><br/>Or you can contact me through any of the social media (given at bottom right)"],
                 [true,""]
             ]
         }
@@ -32,6 +38,8 @@ export default class Terminal extends Component {
             content.push(fullContent[i+1]);
             content.push([fullContent[i+2][0],""]);
             this.setState({content});
+            var elem = document.getElementById('terminal-core');
+            elem.scrollTop = elem.scrollHeight;
         }
     }
     
@@ -39,9 +47,11 @@ export default class Terminal extends Component {
         const {content}=this.state;
         return (
             <div className="terminal">
+            <div className="terminal-top">SriHarsha@Chilukuri:~</div>
+            <div id="terminal-core" className="terminal-core">
             {
                 content.map(line=>(
-                    <div className="terminal-line">
+                    <div key={line[1]} className="terminal-line">
                         {
                             line[0]&&(
                                 <div className="terminal-left-line">
@@ -54,12 +64,11 @@ export default class Terminal extends Component {
                                 </div>
                             )
                         }
-                        <div>
-                            {line[1]}
-                        </div>
+                        <div dangerouslySetInnerHTML={{__html:line[1]}} />
                     </div>
                 ))
             }
+            </div>
             </div>
         )
     }

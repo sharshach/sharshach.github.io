@@ -7,14 +7,7 @@
     background-image: linear-gradient( #222222 , #111111);
     color: white;
 }
-@media only screen and (max-width: 900px) {
-    .github-stats{
-        flex-direction: column;
-    }
-    .github-stats-mobile-img{
-        max-width: 100%;
-    }
-}
+
 
 .github-stats-left{
     position: relative;
@@ -29,4 +22,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+@media only screen and (max-width: 900px) {
+    .github-stats{
+        flex-direction: column;
+    }
+    .github-stats-mobile-img{
+        max-width: 100%;
+    }
+    .github-stats-left{
+        height: unset;
+        
+    }
 }

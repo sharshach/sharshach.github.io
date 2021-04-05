@@ -55,15 +55,42 @@
   text-underline-offset: 5px;
 }
 .terminal{
+  position: relative;
+  border-radius: 10px 10px 0px 0px;
   background-color: #321127;
-  height: 500px;
-  width: 800px;
   margin:10px;
-  text-align: left;
+  width: 800px;
+  height: 500px;
+  max-width: calc(100% - 20px);
   font-size: 17px;
   font-family: monospace;
   border: solid 1px #555555;
+}
+.terminal-core{
+  max-height: calc(100% - 40px);
+  text-align: left;
   padding: 2px 5px;
+  overflow-y: scroll;
+}
+.terminal-core::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+.terminal-core::-webkit-scrollbar-track {
+  box-shadow: inherit; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.terminal-core::-webkit-scrollbar-thumb {
+  background: #aaaaaa; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.terminal-core::-webkit-scrollbar-thumb:hover {
+  background: #dddddd; 
 }
 .terminal-line,
 .terminal-left-line{
@@ -78,4 +105,12 @@
 .terminal-path{
   color:#2e78fb;
   font-weight: bold;
+}
+.terminal-top{
+  width: 100%;
+  background-color: #333333;
+  height: 40px;
+  font-weight: bold;
+  line-height: 40px;
+  border-radius: 10px 10px 0px 0px;
 }
