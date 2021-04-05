@@ -25,7 +25,14 @@ class App extends React.Component {
       this.setState({theme:"dark"});
     }
   }
-  
+  printConsoleData=()=>{
+    console.log("%cHi There\nI am Chilukuri Sri Harsha", "color:blue; font-size: 16pt");
+    console.log("%cYou are here probably because you know some code\nWant to discuss anything with me? Contact me at sharshach@gmail.com", "color:green; font-size: 12pt");
+
+  }
+  componentDidMount(){
+    this.printConsoleData();
+  }
   render() {
     const{theme}=this.state;
     return (
