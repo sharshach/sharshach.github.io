@@ -12,7 +12,7 @@ export default class Jobs extends React.Component {
   render() {
     return jobs ? (
       <div className="jobs">
-      <div className="my-heading">Projects</div>
+      <div className="my-heading">Experiences</div>
       <div className="jobs-list">
         {jobs.map(job => (
           <div className="job-col" key={job.name}>
