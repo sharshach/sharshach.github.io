@@ -24,13 +24,16 @@ export default class ThemeSwitch extends React.Component {
         const closeDragElement=()=> {
             /* stop moving when mouse button is released:*/
             document.onmouseup = null;
+            document.ontouchend=null;
             document.onmousemove = null;
+            document.ontouchmove=null;
             elmnt.style.top="100px"
         }
         const elementDrag=(e)=> {
             e = e || window.event;
             e.preventDefault();
             // calculate the new cursor position:
+            console.log(e);
             pos2 = pos4 - e.clientY;
             pos4 = e.clientY;
             // set the element's new position:
@@ -54,15 +57,20 @@ export default class ThemeSwitch extends React.Component {
           
           pos4 = e.clientY;
           document.onmouseup = closeDragElement;
+          document.ontouchend=closeDragElement;
           // call a function whenever the cursor moves:
           document.onmousemove = elementDrag;
+          document.ontouchmove = elementDrag;
         }
         if (document.getElementById(elmnt.id)) {
           /* if present, the header is where you move the DIV from:*/
           document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+          document.getElementById(elmnt.id).ontouchstart = dragMouseDown;
+          
         } else {
           /* otherwise, move the DIV from anywhere inside the DIV:*/
           elmnt.onmousedown = dragMouseDown;
+          elmnt.ontouchstart=dragMouseDown;
         }
     }
     componentDidMount(){

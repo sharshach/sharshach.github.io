@@ -17,7 +17,6 @@ export default class Header extends React.Component{
     // }
     componentDidUpdate(){
         const {theme}=this.props;
-        console.log(theme);
         if(this.state.theme!==theme){
             this.setState({theme})
         }
