@@ -6,12 +6,20 @@ import "../style.css";
 export default class Jobs extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      theme:this.props.theme,
+    };
   }
-
+  componentDidUpdate(){
+    const {theme}=this.props;
+    if(this.state.theme!==theme){
+        this.setState({theme})
+    }
+  }
   render() {
+    const {theme}=this.state;
     return jobs ? (
-      <div className="jobs">
+      <div className={`jobs ${theme==="dark"?"background-dark":"background-light"}`}>
       <div className="my-heading">Experiences</div>
       <div className="jobs-list">
         {jobs.map(job => (
