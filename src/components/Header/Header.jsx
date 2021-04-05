@@ -9,11 +9,19 @@ export default class Header extends React.Component{
         this.state = {
             x:0,
             y:0,
+            theme:this.props.theme,
         };
     }
     // componentDidMount(){
     //     setInterval(this.moveStar, 1);
     // }
+    componentDidUpdate(){
+        const {theme}=this.props;
+        console.log(theme);
+        if(this.state.theme!==theme){
+            this.setState({theme})
+        }
+    }
     moveStar=()=>{
         const {x,y}=this.state;
         this.setState({x:(x+Math.random()-0.5)%100,y:(y+Math.random()-0.5)%100});
@@ -23,8 +31,9 @@ export default class Header extends React.Component{
         
     // }
     render() {
+        const {theme}=this.state;
         return (
-            <div className="header-main">
+            <div className={`header-main ${theme==="dark"?"background-dark":"background-light"}`} >
                 {/* <div className="header-tiles">
                 <div className="header-tile">Projects</div>
                 <div className="header-tile">Projects</div>

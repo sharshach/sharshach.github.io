@@ -1,7 +1,6 @@
 .my-heading{
     position: relative;
     font-size: 30px;
-    color: white;
     text-decoration: underline blue 5px;
     text-underline-offset: 5px;
     
@@ -13,15 +12,25 @@
     margin: 10px;
 }
 button{
-    background-color: #000000;
+    background-color: #2e78fb;
+    color:white;
     height: 70px;
     width: 150px;
     border-width:1px;
     border-bottom-width: 2px;
     border-right-width: 2px;
     outline: none;
-    border-color: #FFFFFF;
     border-radius: 5px;
-    color: white;
     font-size: 20px;
+}
+.background-light{
+    background-color: #FFFFFF;
+
+    background-image: linear-gradient( #FFFFFF , #EEEEEE);
+    color:#111111;
+}
+.background-dark{
+    background-color: #222222;
+    background-image: linear-gradient( #222222 , #111111);
+    color:#EEEEEE;
 }
