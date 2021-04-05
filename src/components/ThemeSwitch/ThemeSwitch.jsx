@@ -53,7 +53,7 @@ export default class ThemeSwitch extends React.Component {
             setData();
         }
         const elementTouchDrag=(e)=> {
-            console.log(e)
+            // console.log(e)
             e = e || window.event;
             e.preventDefault();
             // calculate the new cursor position:
@@ -72,7 +72,7 @@ export default class ThemeSwitch extends React.Component {
           document.onmousemove = elementDrag;
         }
         const onTouchStart=(e)=> {
-        console.log(e);
+        // console.log(e);
           e = e || window.event;
           e.preventDefault();
           e.stopPropagation(); 
