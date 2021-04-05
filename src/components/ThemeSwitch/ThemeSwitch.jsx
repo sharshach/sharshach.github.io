@@ -29,14 +29,7 @@ export default class ThemeSwitch extends React.Component {
             document.ontouchmove=null;
             elmnt.style.top="100px"
         }
-        const elementDrag=(e)=> {
-            e = e || window.event;
-            e.preventDefault();
-            // calculate the new cursor position:
-            console.log(e);
-            pos2 = pos4 - e.clientY;
-            pos4 = e.clientY;
-            // set the element's new position:
+        const setData=()=>{
             const newTop = (elmnt.offsetTop - pos2);
             if(newTop>95&&newTop<200){
                 elmnt.style.top=newTop + "px";
@@ -50,6 +43,25 @@ export default class ThemeSwitch extends React.Component {
                 closeDragElement();
             }
         }
+        const elementDrag=(e)=> {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos2 = pos4 - e.clientY;
+            pos4 = e.clientY;
+            // set the element's new position:
+            setData();
+        }
+        const elementTouchDrag=(e)=> {
+            console.log(e)
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos2 = pos4 - e.touches[0].clientY;
+            pos4 = e.touches[0].clientY;
+            // set the element's new position:
+            setData();
+        }
         const dragMouseDown=(e)=> {
           e = e || window.event;
           e.preventDefault();
@@ -57,21 +69,34 @@ export default class ThemeSwitch extends React.Component {
           
           pos4 = e.clientY;
           document.onmouseup = closeDragElement;
-          document.ontouchend=closeDragElement;
-          // call a function whenever the cursor moves:
           document.onmousemove = elementDrag;
-          document.ontouchmove = elementDrag;
         }
-        if (document.getElementById(elmnt.id)) {
-          /* if present, the header is where you move the DIV from:*/
-          document.getElementById(elmnt.id).onmousedown = dragMouseDown;
-          document.getElementById(elmnt.id).ontouchstart = dragMouseDown;
+        const onTouchStart=(e)=> {
+        console.log(e);
+          e = e || window.event;
+          e.preventDefault();
+          e.stopPropagation(); 
+          // get the mouse cursor position at startup:
           
-        } else {
-          /* otherwise, move the DIV from anywhere inside the DIV:*/
-          elmnt.onmousedown = dragMouseDown;
-          elmnt.ontouchstart=dragMouseDown;
+          pos4 = e.touches[0].clientY;
+          document.ontouchend=closeDragElement;
+          
+          document.ontouchmove = elementTouchDrag;
         }
+        elmnt.addEventListener('mousedown', function(e){
+            dragMouseDown(e);
+        }, false);
+        elmnt.addEventListener('touchstart', function(e){
+            onTouchStart(e);
+        }, false);
+        elmnt.addEventListener('touchmove', function(e){
+            elementTouchDrag(e);
+        }, false);
+        elmnt.addEventListener('touchend', function(e){
+            closeDragElement()
+        }, false);
+        
+        // elmnt.onmousedown = dragMouseDown;
     }
     componentDidMount(){
         const e=document.getElementById("theme-switch")
