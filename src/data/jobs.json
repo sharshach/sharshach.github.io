@@ -4,7 +4,7 @@
     "name": "RECursion",
     "locality": "Durgapur, WB, IN",
     "tag": "Programming Club of NIT DURGAPUR",
-    "logo": "https://www.recursionnitd.in/static/image/logo.png",
+    "logo": "RECursion.png",
     "role": [
       {
         "name": "Junior Coordinator",
@@ -16,12 +16,16 @@
         "start": "July 2020"
       }
     ],
-    "website": "https://recursionnitd.in"
+    "curr_role":"Senior Coordinator",
+    "start":"January 2020",
+    "end":"present",
+    "website": "https://recursionnitd.in",
+    "background-color":"#2E7D32"
   },
   {
     "type": "intern",
     "name": "WorkatTech",
-    "logo": "https://workat.tech/images/At-360x360.png",
+    "logo": "WAT.png",
     "locality": "Bangalore, KA,IN",
     "tag": "Educational Platform for future generation",
     "role": [
@@ -30,6 +34,10 @@
         "start": "Apr 2020"
       }
     ],
-    "website": "https://workat.tech"
+    "curr_role":"Software Development Engineer Intern",
+    "start":"April 2020",
+    "end":"present",
+    "website": "https://workat.tech",
+    "background-color":"unset"
   }
 ]
