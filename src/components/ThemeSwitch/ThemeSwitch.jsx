@@ -1,7 +1,8 @@
 import React from 'react'
 import './theme-switch.css'
 import NightsStayIcon from '@material-ui/icons/NightsStay';
-import Brightness5Icon from '@material-ui/icons/Brightness5';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 export default class ThemeSwitch extends React.Component {
     constructor(props) {
         super(props)
@@ -107,7 +108,7 @@ export default class ThemeSwitch extends React.Component {
         return (
             <div id="theme-switch" className={`theme-switch theme-switch-${theme==="dark"?"light":"dark"}`}>
             {
-                theme==="dark"?<Brightness5Icon className="theme-switch-icon" fontSize="large"/>:<NightsStayIcon className="theme-switch-icon" fontSize="large"/>
+                theme==="dark"?<FontAwesomeIcon  icon={faSun} className="theme-switch-icon theme-switch-icon-sun" fontSize="larger" color="yellow"/>:<NightsStayIcon className="theme-switch-icon" fontSize="large"/>
             }
             </div>
         )
