@@ -24,7 +24,6 @@
         "node-notifier": ">=8.0.1",
         "open": ">=6.0.0",
         "react-dev-utils": ">=11.0.4",
-        "webpack": "^5.31.0",
         "webpack-dev-server": "^3.11.2",
         "yargs-parser": ">=5.0.0-security.0"
     },
