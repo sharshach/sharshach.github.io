@@ -23,28 +23,18 @@ export default class Jobs extends React.Component {
       <div className="my-heading">Experiences</div>
       <div className="jobs-list">
         {jobs.map(job => (
-          <div className="job-col" key={job.name}>
-            <div className="job-top">
-              <div className="logo-div">
-                <img className="logo-img" src={job.logo} alt={job.code} />
-              </div>
-              <div className="name">{job.name}</div>
-              <div className="type">{job.type}</div>
-              <div className="tag">{job.tag}</div>
+          <a href={job.website} target="blank" className="job" key={job.name}>
+            <div className="job-company-name">{job.name}</div>
+            <div className="job-logo-div">
+              <img className="job-logo-img" src={job.logo} alt={job.code} style={{backgroundColor:job["background-color"]}}/>
             </div>
-            <div className="role">
-              {job.role.map((role) => (
-                <div key={role.name}>
-                  <p className="role-name">{role.name}</p>
-                  <p className="role-date">
-                    {role.start} - {role.end ? role.end : "Present"}{" "}
-                  </p>
-                </div>
-              ))}
+            <div className="job-core-empty"></div>
+            <div className="job-core">
+              <div className="job-core-data">{job.name} is a {job.tag}.</div>
+              <div className="job-core-data job-core-data-role">{job.curr_role}</div>
+              <div className="job-core-data">{job.locality} | {job.start} - {job.end}</div>
             </div>
-            <p className="webite">{job.website}</p>
-            <p className="locality">{job.locality}</p>
-          </div>
+          </a>
         ))}
         </div>
       </div>

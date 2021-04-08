@@ -17,13 +17,16 @@
     background-color:inherit;
 }
 .theme-switch-light{
-    background-color: #f58239;
+    background-color: #f5823955;
 }
 .theme-switch-dark{
     background-color: #222222;
 }
 .theme-switch-icon{
     color: white;
-    font-size: large;
-   margin:8px;
+    font-size: 33px;
+    margin:8px;
+}
+.theme-switch-icon-sun{
+    color: #f58239;
 }

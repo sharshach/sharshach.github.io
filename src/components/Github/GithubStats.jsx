@@ -41,7 +41,7 @@ export default class GithubStats extends React.Component {
                     </div>
                 ))
             }
-            <a href="https://github.com/sharshach" target="blank">
+            <a style={{width:"400px",margin:"10px"}} href="https://github.com/sharshach" target="blank">
             <button style={{width:"200px"}}>More Projects </button>
             </a>
             </div>
