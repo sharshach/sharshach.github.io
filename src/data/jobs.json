@@ -15,7 +15,8 @@
     "start":"May 2021",
     "end":"present",
     "website": "https://www.microsoft.com/",
-    "background-color":"unset"
+    "background-color":"unset",
+    "border-radius":"0px",
   },
   {
     "type": "club",
