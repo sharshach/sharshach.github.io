@@ -26,7 +26,7 @@ export default class Jobs extends React.Component {
           <a href={job.website} target="blank" className="job" key={job.name}>
             <div className="job-company-name">{job.name}</div>
             <div className="job-logo-div">
-              <img className="job-logo-img" src={job.logo} alt={job.code} style={{backgroundColor:job["background-color"]}}/>
+              <img className="job-logo-img" src={job.logo} alt={job.code} style={{backgroundColor:job["background-color"],borderRadius:job["border-radius"]||"20px"}}/>
             </div>
             <div className="job-core-empty"></div>
             <div className="job-core">
