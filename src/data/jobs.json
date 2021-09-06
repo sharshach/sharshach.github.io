@@ -1,5 +1,24 @@
 [
   {
+    "type": "intern",
+    "name": "Microsoft",
+    "logo": "microsoft-80660_640.png",
+    "locality": "Hyderabad, TS, IN",
+    "tag": "Technology company which aims to make each person and organization on the planet to achieve more",
+    "role": [
+      {
+        "name": "Software Engineer Intern",
+        "start": "Apr 2020"
+      }
+    ],
+    "curr_role":"Software Engineer Intern",
+    "start":"May 2021",
+    "end":"present",
+    "website": "https://www.microsoft.com/",
+    "background-color":"unset",
+    "border-radius":"0px"
+  },
+  {
     "type": "club",
     "name": "RECursion",
     "locality": "Durgapur, WB, IN",
@@ -36,7 +55,7 @@
     ],
     "curr_role":"Software Development Engineer Intern",
     "start":"April 2020",
-    "end":"present",
+    "end":"April 2021",
     "website": "https://workat.tech",
     "background-color":"unset"
   }
