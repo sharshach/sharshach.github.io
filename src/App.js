@@ -30,7 +30,7 @@ componentWillUnmount() {
     return (
       <div className="App">
        {
-  this.state.newyear?"Happy New Year 2022": this.state.time
+  "Happy New Year 2022"
 }
      
     </div>
