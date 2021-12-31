@@ -56,20 +56,7 @@ componentWillUnmount() {
        {
   this.state.newyear?"Happy New Year 2022": this.state.time
 }
-     {/*<Header theme={theme}/>
-   <div className="left-block">
-              <div id="jobs"><Jobs  theme={theme}/></div>
-              <div  id="github"><GithubStats  theme={theme}/></div>
-            {/* <div className="app-projects">
-                  <Projects />
-              </div> */}
-        {/* <Resume /> */}
-      </div>
-      <div className="right-block">
-        <Contact />
-      </div>
-      <ThemeSwitch theme={this.state.theme} onChangeTheme={this.onChangeTheme}/>
-    */}
+     
     </div>
     )
   }
