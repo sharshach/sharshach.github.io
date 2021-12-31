@@ -14,6 +14,8 @@ class App extends React.Component {
   
     this.state = {
        theme:"dark",
+NewYear:false,
+time:"00h:00m:00s"
     }
   }
   onChangeTheme=()=>{
@@ -30,18 +32,35 @@ class App extends React.Component {
     console.log("%cYou are here probably because you know some code\nWant to discuss anything with me? Contact me at sharshach@gmail.com", "color:green; font-size: 12pt");
 
   }
+updTime=()=>{
+var date=new Date();
+var min=60-date.getMinutes();
+var sec=60-date.getSeconds();
+this.setState({time: min+"M:"+sec+"S",newYear:date.getYear()==2022});
+}
   componentDidMount(){
     this.printConsoleData();
+    
+
   }
+componentDidMount() {
+  this.interval = setInterval(updTime, 1000);
+}
+componentWillUnmount() {
+  clearInterval(this.interval);
+}
   render() {
     const{theme}=this.state;
     return (
       <div className="App">
-      <Header theme={theme}/>
-    <div className="left-block">
+       {
+  this.state.newyear?"Happy New Year 2022": this.state.time
+}
+     {/*<Header theme={theme}/>
+   <div className="left-block">
               <div id="jobs"><Jobs  theme={theme}/></div>
               <div  id="github"><GithubStats  theme={theme}/></div>
-              {/* <div className="app-projects">
+            {/* <div className="app-projects">
                   <Projects />
               </div> */}
         {/* <Resume /> */}
@@ -50,6 +69,7 @@ class App extends React.Component {
         <Contact />
       </div>
       <ThemeSwitch theme={this.state.theme} onChangeTheme={this.onChangeTheme}/>
+    */}
     </div>
     )
   }
