@@ -15,7 +15,7 @@ time:"00h:00m:00s"
   
 updTime=()=>{
 var date=new Date();
-var min=60-date.getMinutes();
+var min=60-date.getMinutes()-1;
 var sec=60-date.getSeconds();
 this.setState({time: min+"M:"+sec+"S",newYear:date.getYear()===2022});
 }
