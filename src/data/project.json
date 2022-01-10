@@ -6,10 +6,36 @@
         "end":"July 2021",
         "description":"Microsoft Lists is a Information Management Platform",
         "points":[
-            "Create and manage lists",
-            "Create and manage lists",
-            "Create and manage lists",
-            "Implemented Search Feuture"
+            "Worked on implementing local search which enables search when users are in offline mode also",
+            "User Experience will be enhanced as users can work seamlessly irrespective of their network speeds.",
+            "search on complex fields are optamized enhancing the speed of search"
+        ],
+        "img": "/microsoft-80660_640.png"
+    },
+    "wat-ticketing":{
+        "for":"WorkatTech",
+        "title":"Ticketing System",
+        "start":"May 2020",
+        "end":"Sept 2020",
+        "description":"a platform used for Doubts Clarification at workat.tech",
+        "points":[
+            "Users of WorkatTech can post their doubts",
+            "A one to one interaction is arranged between Student and Teaching Assistant which initiates smooth communication for students.",
+            "Students can keep track of all the doubts and their conversations as they wont mix up with other conversations and will be on point",
+            "Allotment of  Teaching Assistant can also be made automaatically by the system"
+        ],
+        "img": "/WAT.png"
+    },
+    "nitdgp-qrcode":{
+        "for":"NIT Durgpur",
+        "title":"QR Code",
+        "start":"August 2021",
+        "end":"December 2021",
+        "description":"QR Code is a simple and easy to use QR code generator",
+        "points":[
+            "QR Code can be added into Academic documents like Grade Card,Degree Certificate etc. So that third Parties can Easily verify the Authenticity of Student by just scanning the QR Code.",
+            "NIT Durgapur can create And verify qr codes in different formats depending on the Requirements.",
+            "A face image of the student is also addable to the QR code Which enhances Security."
         ]
     }
 }

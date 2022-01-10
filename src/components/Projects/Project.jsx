@@ -14,11 +14,21 @@ class Project extends React.Component {
         const pid=params.pid;
         return(
             <div className="project-main">
-                <h1>{data[pid].title}</h1>
-                <p>{data[pid].description}</p>
-                {
-                    data[pid].points.forEach(point=><p>{point}</p>)
-                }
+                <div className="project-title">{data[pid].title}</div>
+                <div className="project-body">
+                    <div className="project-left">
+                        {data[pid].img && <img className="project-img" src={data[pid].img} alt={data[pid].for}/>}
+                        {data[pid].for}
+                    </div>
+                    <div className="project-right">
+                        <div className="project-description">{data[pid].description}</div>
+                        <ul className="project-points">
+                        {
+                            data[pid].points.map(point=><li className="project-point">{point}</li>)
+                        }
+                        </ul>
+                    </div>
+                </div>
             </div>
         )
     }
