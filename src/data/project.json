@@ -1,0 +1,15 @@
+{
+    "ms-lists":{
+        "for":"Microsoft",
+        "title":"Microsoft Lists",
+        "start":"May 2021",
+        "end":"July 2021",
+        "description":"Microsoft Lists is a Information Management Platform",
+        "points":[
+            "Create and manage lists",
+            "Create and manage lists",
+            "Create and manage lists",
+            "Implemented Search Feuture"
+        ]
+    }
+}

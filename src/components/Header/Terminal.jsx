@@ -17,7 +17,7 @@ export default class Terminal extends Component {
                 [true,"projects"],
                 [false,"I worked in several projects personally and in teams <a href='#github'>click here to view my projects</a>"],
                 [true,"experience"],
-                [false,"Currently I am working in work@tech. <a href='#github'>click here to view my Experiences</a>"],
+                [false,"Currently I am working in Microsoft. <a href='#github'>click here to view my Experiences</a>"],
                 [true,"contact"],
                 [false,"Contact Me through <a href='mailto:sharshach@gmail.com'>mail(click here)</a><br/>Or you can contact me through any of the social media (given at bottom right)"],
                 [true,""]

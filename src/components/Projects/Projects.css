@@ -1,3 +1,12 @@
+.project-main{
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* old code before */
 .logo-div {
   position: absolute;
   top: 0%;
