@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
 import Project from "./components/Projects/Project";
 import Jobs from "./components/Jobs/Jobs";
 import Header from "./components/Header/Header";
@@ -61,11 +61,11 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
         <div>
-        <Routes>
-            <Route path="/" exact element={this.Home()} />
-            <Route path="/project/:pid" exact element={<Project/>} />
-            <Route path="*" element={this.Home()} />
-        </Routes>
+        <Switch>
+            <Route path="/" exact component={this.Home} />
+            <Route path="/project/:pid" exact component={Project} />
+            <Route path="*" element={this.Home} />
+        </Switch>
         </div>
         </BrowserRouter>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import './Projects.css';
-import { withParams } from "../hocs";
 import data from "../../data/project.json";
 
 class Project extends React.Component {
@@ -10,7 +9,8 @@ class Project extends React.Component {
     }
 
     render() {
-        const { params } = this.props;
+        const { match } = this.props;
+        const {params}=match;
         const pid=params.pid;
         return(
             <div className="project-main">
@@ -24,7 +24,7 @@ class Project extends React.Component {
                         <div className="project-description">{data[pid].description}</div>
                         <ul className="project-points">
                         {
-                            data[pid].points.map(point=><li className="project-point">{point}</li>)
+                            data[pid].points.map(point=><li key={pid+point} className="project-point">{point}</li>)
                         }
                         </ul>
                     </div>
@@ -34,4 +34,4 @@ class Project extends React.Component {
     }
 }
 
-export default withParams(Project);
+export default Project;
