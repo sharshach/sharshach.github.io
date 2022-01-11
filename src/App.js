@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-// import Projects from "./components/Projects/Projects";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
+import Project from "./components/Projects/Project";
 import Jobs from "./components/Jobs/Jobs";
 import Header from "./components/Header/Header";
 import Contact from "./components/Contact/Contact";
@@ -33,23 +34,40 @@ class App extends React.Component {
   componentDidMount(){
     this.printConsoleData();
   }
-  render() {
+  Home=()=>{
     const{theme}=this.state;
+      return (
+        <div>
+        <Header theme={theme}/>
+        <div className="left-block">
+                <div id="jobs"><Jobs  theme={theme}/></div>
+                <div  id="github"><GithubStats  theme={theme}/></div>
+                {/* <div className="app-projects">
+                    <Projects />
+                </div> */}
+             {/* <Resume /> */}
+        </div>
+        <div className="right-block">
+            <Contact />
+        </div>
+            <ThemeSwitch theme={this.state.theme} onChangeTheme={this.onChangeTheme}/>
+        </div>
+        )
+    };
+
+  render() {
+      console.log(this.props);
     return (
       <div className="App">
-      <Header theme={theme}/>
-    <div className="left-block">
-              <div id="jobs"><Jobs  theme={theme}/></div>
-              <div  id="github"><GithubStats  theme={theme}/></div>
-              {/* <div className="app-projects">
-                  <Projects />
-              </div> */}
-        {/* <Resume /> */}
-      </div>
-      <div className="right-block">
-        <Contact />
-      </div>
-      <ThemeSwitch theme={this.state.theme} onChangeTheme={this.onChangeTheme}/>
+        <BrowserRouter>
+        <div>
+        <Switch>
+            <Route path="/" exact component={this.Home} />
+            <Route path="/project/:pid" exact component={Project} />
+            <Route path="*" element={this.Home} />
+        </Switch>
+        </div>
+        </BrowserRouter>
     </div>
     )
   }

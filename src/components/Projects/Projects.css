@@ -1,4 +1,64 @@
-.logo-div {
+.project-main{
+    min-height: calc(100vh - 40px);
+    background-color: azure;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+    padding: 20px;
+    font-size: 30px;
+}
+ .project-title{
+    height: 100px;
+    line-height: 100px;
+    background-color: aquamarine;
+ }
+.project-body{
+    min-height: calc(100vh - 180px);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(167, 255, 226);
+}
+.project-left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:300px;
+    min-height: inherit;
+    background-color: rgb(123, 226, 192);
+}
+.project-right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: inherit;
+}
+.project-img{
+    width:100px;
+    height:100px;
+    margin: 25px;
+}
+.project-description{
+    font-size: 25px;
+    position: relative;
+}
+.project-points{
+    align-items: left;
+    text-align: left;
+    font-size: 20px;
+    height: 100%;
+}
+.project-point{
+    font-size: 20px;
+    position: relative;
+    margin: 10px;
+}
+/* old code before */
+/* .logo-div {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -60,4 +120,4 @@
   .proj-col {
     width: 50%;
   }
-}
+}  */

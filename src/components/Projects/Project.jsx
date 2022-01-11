@@ -1,38 +1,37 @@
 import React from "react";
 import './Projects.css';
-import Card, {
-    CardPrimaryContent,
-    CardMedia,
-    CardActions,
-    CardActionButtons,
-    CardActionIcons
-  } from "@material/react-card";
-import '@material/react-card/dist/card.css';
-export default class Projects extends React.Component {
+import data from "../../data/project.json";
+
+class Project extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
 
     render() {
-        const {data}=this.props;
+        const { match } = this.props;
+        const {params}=match;
+        const pid=params.pid;
         return(
-            <Card >
-                <CardPrimaryContent>
-                    <h1>{data.name}</h1>
-                    <CardMedia square imageUrl='./my/fancy/image.png' />
-                </CardPrimaryContent>
-
-                <CardActions>
-                    <CardActionButtons>
-                    <button>Click Me</button>
-                    </CardActionButtons>
-
-                    <CardActionIcons>
-                    <i>Click Me Too!</i>
-                    </CardActionIcons>
-                </CardActions>
-            </Card>
+            <div className="project-main">
+                <div className="project-title">{data[pid].title}</div>
+                <div className="project-body">
+                    <div className="project-left">
+                        {data[pid].img && <img className="project-img" src={data[pid].img} alt={data[pid].for}/>}
+                        {data[pid].for}
+                    </div>
+                    <div className="project-right">
+                        <div className="project-description">{data[pid].description}</div>
+                        <ul className="project-points">
+                        {
+                            data[pid].points.map(point=><li key={pid+point} className="project-point">{point}</li>)
+                        }
+                        </ul>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
+
+export default Project;
