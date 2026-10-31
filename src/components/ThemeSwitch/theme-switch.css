@@ -1,32 +1,8 @@
-.theme-switch{
-    position: fixed;
-    top:100px;
-    right:50px;
-    width: 50px;
-    height:50px;
-    background-color: green;
-    border-radius: 100%;
-}
-.theme-switch::before{
-    position: absolute;
-    left:22px;
-    bottom:50px;
-    width: 6px;
-    content: "";
-    height: 250px;
-    background-color:inherit;
-}
-.theme-switch-light{
-    background-color: #f5823955;
-}
-.theme-switch-dark{
-    background-color: #222222;
-}
-.theme-switch-icon{
-    color: white;
-    font-size: 33px;
-    margin:8px;
-}
-.theme-switch-icon-sun{
-    color: #f58239;
+.theme-switch { position: fixed; top: 80px; right: 24px; z-index: 20; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--accent); touch-action: none; user-select: none; }
+.theme-switch::before { position: absolute; content: ""; width: 2px; height: 110px; bottom: 47px; left: 22px; background: var(--line); pointer-events: none; }
+.theme-switch:hover { border-color: var(--accent); }
+[data-theme="dark"] .theme-switch { color: #ffc08c; }
+@media (max-width: 600px) {
+  .theme-switch { top: 18px; right: 18px; width: 44px; height: 44px; }
+  .theme-switch::before { bottom: 43px; left: 20px; height: 20px; }
 }

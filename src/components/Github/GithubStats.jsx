@@ -1,51 +1,29 @@
-import React from 'react'
-import data from '../../data/github-stats.json'
-import './github-stats.css';
-import '../style.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import data from "../../data/github-stats.json";
+import profile from "../../data/profile.json";
+import "./github-stats.css";
 
-export default class GithubStats extends React.Component {
-    constructor(props){
-        super(props)
-    
-        this.state = {
-             theme:this.props.theme,
-        }
-    }
-    
-    componentDidUpdate(){
-        const {theme}=this.props;
-        if(this.state.theme!==theme){
-            this.setState({theme})
-        }
-    }
-    render() {
-        const {theme}=this.state;
-        return (
-            <div className={`github-stats ${theme==="dark"?"background-dark":"background-light"}`}>
-            <div className="github-stats-left">
-            <div className="my-heading">Projects</div>
-                <div className="margin-10">
-                    <img className="github-stats-mobile-img" alt="Stats" src={`https://github-readme-stats.vercel.app/api?username=sharshach&theme=${theme==="dark"?"highcontrast":"solarizedlight"}&show_icons=true&count_private=true`}/>          
-                </div>
-                <div className="margin-10">
-                    <img className="github-stats-mobile-img"  alt="languages" src={`https://github-readme-stats.vercel.app/api/top-langs/?username=sharshach&theme=${theme==="dark"?"highcontrast":"solarizedlight"}&hide=html&layout=compact`} />
-                </div>
+export default function GithubStats() {
+    return (
+        <section id="github" className="section personal-projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Personal projects</h2>
+            <p className="section-intro">A small selection of earlier public work, separate from
+                employer experience. These are archival explorations, not claims of current adoption.</p>
+            <div className="public-project-list">
+                {data.map(item => (
+                    <article className="public-project" key={item.id}>
+                        <h3>{item.title}</h3>
+                        <p className="project-status">{item.status}</p>
+                        <p>{item.summary}</p>
+                        <div className="link-row">
+                            <a href={item.source}>{item.sourceLabel}</a>
+                            <Link to={`/project/${item.id}`} aria-label={`Read about ${item.title}`}>Project notes</Link>
+                        </div>
+                    </article>
+                ))}
             </div>
-            <div className="github-stats-right">
-            {
-                data.map(item=>(
-                    <div key={item.repo} className="margin-10 ">
-                    <a href={`https://github.com/${item.user}/${item.repo}`}>
-                        <img  className="github-stats-mobile-img" alt={item.repo} src={`https://github-readme-stats.vercel.app/api/pin/?username=${item.user}&repo=${item.repo}&theme=${theme==="dark"?"highcontrast":"solarizedlight"}`}/>
-                    </a>
-                    </div>
-                ))
-            }
-            <a style={{width:"400px",margin:"10px"}} href="https://github.com/sharshach" target="blank">
-            <button style={{width:"200px"}}>More Projects </button>
-            </a>
-            </div>
-        </div>
-        )
-    }
+            <a className="github-profile-link" href={profile.github}>More explorations on GitHub</a>
+        </section>
+    );
 }

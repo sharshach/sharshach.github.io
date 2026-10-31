@@ -1,0 +1,8 @@
+.work-list { margin-top: 36px; }
+.work-item { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; border-top: 1px solid var(--line); padding: 32px 0; }
+.work-item:last-child { padding-bottom: 0; }
+.work-item p:last-child { margin-bottom: 0; }
+.work-lesson { color: var(--muted); font-size: 15px; }
+.work-lesson strong { color: var(--text); display: block; margin-bottom: 6px; }
+@media (max-width: 900px) { .work-item { gap: 32px; } }
+@media (max-width: 600px) { .work-item { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; } }

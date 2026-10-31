@@ -1,116 +1,71 @@
-import React from 'react'
-import './theme-switch.css'
-import NightsStayIcon from '@material-ui/icons/NightsStay';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import "./theme-switch.css";
+
 export default class ThemeSwitch extends React.Component {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-            theme:this.props.theme,
+    state = { offset: 0 };
+    startY = null;
+    distance = 0;
+    suppressClick = false;
+
+    onPointerDown = event => {
+        if (event.isPrimary === false || event.button !== 0) { return; }
+        this.startY = event.clientY;
+        this.distance = 0;
+        this.suppressClick = false;
+        if (event.currentTarget.setPointerCapture) {
+            event.currentTarget.setPointerCapture(event.pointerId);
         }
-    }
-    componentDidUpdate(){
-        const {theme}=this.props;
-        if(this.state.theme!==theme){
-            this.setState({theme})
+    };
+
+    onPointerMove = event => {
+        if (this.startY === null) { return; }
+        this.distance = event.clientY - this.startY;
+        this.setState({ offset: Math.max(0, Math.min(90, this.distance)) });
+    };
+
+    onPointerUp = () => {
+        if (this.startY === null) { return; }
+        this.suppressClick = Math.abs(this.distance) > 8;
+        if (this.distance >= 60) { this.props.onChangeTheme(); }
+        this.startY = null;
+        this.setState({ offset: 0 });
+    };
+
+    onPointerCancel = () => {
+        this.startY = null;
+        this.distance = 0;
+        this.suppressClick = false;
+        this.setState({ offset: 0 });
+    };
+
+    onClick = event => {
+        if (this.suppressClick && event.detail !== 0) {
+            this.suppressClick = false;
+            return;
         }
-    }
-    ChangeTheme=()=>{
-        this.props&&this.props.onChangeTheme&&this.props.onChangeTheme();
-    }
-    dragElement=(elmnt)=>{
-        var  pos2 = 0,pos4 = 0;
-        const closeDragElement=()=> {
-            /* stop moving when mouse button is released:*/
-            document.onmouseup = null;
-            document.ontouchend=null;
-            document.onmousemove = null;
-            document.ontouchmove=null;
-            elmnt.style.top="100px"
-        }
-        const setData=()=>{
-            const newTop = (elmnt.offsetTop - pos2);
-            if(newTop>95&&newTop<200){
-                elmnt.style.top=newTop + "px";
-            }
-            if(newTop>199){
-                elmnt.style.top="100px";
-                closeDragElement();
-                this.ChangeTheme();
-            }
-            if(newTop<97){
-                closeDragElement();
-            }
-        }
-        const elementDrag=(e)=> {
-            e = e || window.event;
-            e.preventDefault();
-            // calculate the new cursor position:
-            pos2 = pos4 - e.clientY;
-            pos4 = e.clientY;
-            // set the element's new position:
-            setData();
-        }
-        const elementTouchDrag=(e)=> {
-            // console.log(e)
-            e = e || window.event;
-            e.preventDefault();
-            // calculate the new cursor position:
-            pos2 = pos4 - e.touches[0].clientY;
-            pos4 = e.touches[0].clientY;
-            // set the element's new position:
-            setData();
-        }
-        const dragMouseDown=(e)=> {
-          e = e || window.event;
-          e.preventDefault();
-          // get the mouse cursor position at startup:
-          
-          pos4 = e.clientY;
-          document.onmouseup = closeDragElement;
-          document.onmousemove = elementDrag;
-        }
-        const onTouchStart=(e)=> {
-        // console.log(e);
-          e = e || window.event;
-          e.preventDefault();
-          e.stopPropagation(); 
-          // get the mouse cursor position at startup:
-          
-          pos4 = e.touches[0].clientY;
-          document.ontouchend=closeDragElement;
-          
-          document.ontouchmove = elementTouchDrag;
-        }
-        elmnt.addEventListener('mousedown', function(e){
-            dragMouseDown(e);
-        }, false);
-        elmnt.addEventListener('touchstart', function(e){
-            onTouchStart(e);
-        }, false);
-        elmnt.addEventListener('touchmove', function(e){
-            elementTouchDrag(e);
-        }, false);
-        elmnt.addEventListener('touchend', function(e){
-            closeDragElement()
-        }, false);
-        
-        // elmnt.onmousedown = dragMouseDown;
-    }
-    componentDidMount(){
-        const e=document.getElementById("theme-switch")
-        this.dragElement(e);
-    }
+        this.suppressClick = false;
+        this.props.onChangeTheme();
+    };
+
     render() {
-        const {theme} = this.state;
+        const isDark = this.props.theme === "dark";
+        const action = `Switch to ${isDark ? "light" : "dark"} mode`;
         return (
-            <div id="theme-switch" className={`theme-switch theme-switch-${theme==="dark"?"light":"dark"}`}>
-            {
-                theme==="dark"?<FontAwesomeIcon  icon={faSun} className="theme-switch-icon theme-switch-icon-sun" fontSize="larger" color="yellow"/>:<NightsStayIcon className="theme-switch-icon" fontSize="large"/>
-            }
-            </div>
-        )
+            <button id="theme-switch" className="theme-switch" type="button"
+                aria-label={action} title={`${action}. Click or pull down.`}
+                style={{ transform: `translateY(${this.state.offset}px)` }}
+                onClick={this.onClick} onPointerDown={this.onPointerDown}
+                onPointerMove={this.onPointerMove} onPointerUp={this.onPointerUp}
+                onPointerCancel={this.onPointerCancel}>
+                <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor"
+                    strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    {isDark ? (
+                        <g><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" /></g>
+                    ) : (
+                        <path d="M20.8 13.2A9 9 0 0 1 10.8 3.2 9 9 0 1 0 20.8 13.2Z" />
+                    )}
+                </svg>
+            </button>
+        );
     }
 }

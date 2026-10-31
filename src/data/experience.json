@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Developer capabilities across web and mobile",
+    "summary": "Reusable visualization capabilities with a coherent experience across platforms.",
+    "contribution": "I contributed API and feature design, cross-platform consistency, rendering, validation, and developer guidance alongside other engineers.",
+    "lesson": "A shared abstraction should preserve meaningful behavior, with compatibility and accessible use considered alongside visual output."
+  },
+  {
+    "title": "Dependable mobile experiences",
+    "summary": "Telemetry-led investigation and partner collaboration to improve routine product use.",
+    "contribution": "I worked on investigation, monitoring, accessible interaction, and recovery behavior, collaborating with partner engineers on fixes.",
+    "lesson": "Reproducible scenarios make disagreement constructive. Validate the measurements and test failure states, not just the normal path."
+  },
+  {
+    "title": "AI-enabled product integration",
+    "summary": "Making useful AI capabilities fit familiar workflows.",
+    "contribution": "My work spans mobile interaction components and product integration, with design and partner teams. I focus on the user task and a practical delivery path.",
+    "lesson": "Adapt an implementation to its platform and make ownership clear. Experiments, validation, and shipped features are different stages."
+  },
+  {
+    "title": "Engineering assistance and team enablement",
+    "summary": "Less repetitive preparation. More useful context for engineers.",
+    "contribution": "I built personal and team automations and early engineering-tool experiments, supported hands-on AI learning, and mentored teammates.",
+    "lesson": "Generated output still needs evaluation. Useful workflows need feedback, maintained context, and clear ownership."
+  }
+]
