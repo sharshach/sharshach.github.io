@@ -128,7 +128,11 @@ it("keeps analytics generic while showing ownership, technologies, and delivery 
   expect(analytics.textContent).not.toContain("dwell");
   expect(analytics.textContent).not.toContain("Outlook");
   expect(analytics.querySelector(".work-outcome strong").textContent).toBe("Implementation & validation");
-  expect(analytics.querySelector(".work-outcome").textContent).toContain("Production rollout is not confirmed");
+  expect(analytics.querySelector(".work-outcome").textContent).toContain("with staged validation");
+  expect(analytics.textContent).not.toContain("Production rollout is not confirmed");
+  expect(analytics.querySelector(".work-judgment").textContent).toContain("Working across organizations");
+  expect(analytics.querySelector(".work-judgment").textContent).toContain("horizontally scaled on-premises systems");
+  expect(analytics.querySelector(".work-judgment").textContent).toContain("modern cloud-based systems");
 });
 
 it("covers AI-first and hackathon responsibilities separately from personal engineering assistants", () => {

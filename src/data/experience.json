@@ -28,8 +28,8 @@
     "problem": "Product analytics needed more complete coverage across usage surfaces and partner-owned systems.",
     "contribution": "I owned the effort from design through implementation and staged validation. I created a new C#/.NET service and repository from scratch, implemented event-driven ingestion with Azure Event Hubs and Azure Cosmos DB, and coordinated integration across 3 organizations and 17 teams.",
     "outcomeLabel": "Implementation & validation",
-    "outcome": "New service and partner integration built, with staged validation. Production rollout is not confirmed.",
-    "judgment": "The central challenge was aligning dependencies and validation across teams while maintaining a single accountable owner for the integration.",
+    "outcome": "New service and partner integration built, with staged validation.",
+    "judgment": "Working across organizations to migrate data from horizontally scaled on-premises systems to modern cloud-based systems required aligning dependencies, ownership, and validation across teams.",
     "focus": ["C# / .NET", "Azure Event Hubs", "Azure Cosmos DB", "Event-driven integration", "Cross-organization coordination", "End-to-end ownership"]
   },
   {
