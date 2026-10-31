@@ -12,7 +12,7 @@
 .navigation-links { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 .App .navigation-link { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); text-decoration: none; font-size: 15px; }
 .App .navigation-link:hover { color: var(--text); text-decoration: underline; }
-.hero { width: min(1200px, calc(100% - 96px)); margin: 0 auto; flex: 1; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); grid-template-rows: auto auto; align-content: center; align-items: center; gap: 24px 48px; padding: 32px 0; }
+.hero { width: min(1200px, calc(100% - 96px)); margin: 0 auto; flex: 1; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); grid-template-rows: auto auto; align-content: center; align-items: center; gap: 24px 48px; padding: 24px 0; }
 .hero-identity { grid-column: 1 / -1; min-width: 0; text-align: center; }
 .hero-identity h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 52px; line-height: 1.12; letter-spacing: -0.025em; }
 .hero > .terminal { min-width: 0; }
@@ -33,9 +33,10 @@
   position: relative;
   border-radius: 10px 10px 0 0;
   background-color: #321127;
-  width: 800px;
-  height: 620px;
-  height: clamp(320px, calc(100svh - 270px), 620px);
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  overflow: hidden;
   max-width: 100%;
   font-size: 17px;
   line-height: 1.6;
@@ -44,7 +45,7 @@
   flex-shrink: 0;
   color-scheme: dark;
 }
-.terminal-core { max-height: calc(100% - 40px); text-align: left; padding: 2px 5px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #aaaaaa #321127; }
+.terminal-core { height: calc(100% - 40px); text-align: left; padding: 2px 5px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #aaaaaa #321127; }
 .terminal-core::-webkit-scrollbar { width: 7px; }
 .terminal-core::-webkit-scrollbar-track { border-radius: 10px; }
 .terminal-core::-webkit-scrollbar-thumb { background: #aaaaaa; border-radius: 10px; }
@@ -75,5 +76,5 @@
   .hero-identity h1 { font-size: 32px; }
   .hero-role { font-size: 16px; }
   .hero-headline { font-size: 22px; }
-  .terminal { height: clamp(300px, calc(100svh - 280px), 500px); font-size: 13px; }
+  .terminal { font-size: 13px; }
 }

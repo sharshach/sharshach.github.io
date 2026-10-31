@@ -20,7 +20,8 @@ are complete viewport-sized sections when the content fits. They grow naturally
 on smaller screens and at increased text sizes; there is no scroll trapping or
 mandatory snapping. Essential career information never waits for the terminal.
 On desktop, the name and role span the opening scene above a 40% profile-text /
-60% terminal split. Major sections use subtly distinct full-width backgrounds
+60% terminal split. The terminal frame keeps a 4:3 aspect ratio at every size,
+with its transcript scrolling inside the frame. Major sections use subtly distinct full-width backgrounds
 in both themes; smaller screens keep the identity above the stacked content.
 
 ## Updating public content
