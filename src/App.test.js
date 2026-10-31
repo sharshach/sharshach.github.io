@@ -36,6 +36,8 @@ it("makes professional identity and the complete experience readable without ani
   render();
   expect(container.querySelector("h1").textContent).toBe("Sri Harsha Chilukuri");
   expect(container.querySelector(".hero-role").textContent).toBe("Software Engineer II at Microsoft");
+  expect(container.querySelector(".hero-identity h1")).not.toBeNull();
+  expect(container.querySelector(".hero-identity .hero-role")).not.toBeNull();
   expect(container.querySelector(".hero-copy .hero-headline").textContent).toContain("useful platforms");
   expect(container.querySelector(".hero-copy .hero-intro").textContent).toContain("AI-assisted engineering");
   expect(container.querySelector(".hero-copy .hero-actions")).not.toBeNull();
@@ -48,6 +50,13 @@ it("makes professional identity and the complete experience readable without ani
   expect(container.querySelector(".experience-screen #jobs")).not.toBeNull();
   expect(container.textContent).not.toContain("Promoted in March 2025");
   expect(container.textContent).not.toContain("No confidential code");
+});
+
+it("gives each major section its own full-width background surface", () => {
+  render();
+  ["work", "team", "automations", "github", "contact"].forEach(id => {
+    expect(container.querySelector(`#${id}`).classList.contains("page-block")).toBe(true);
+  });
 });
 
 it("shows responsibility, outcomes, and engineering judgment without invented metrics", () => {
@@ -107,16 +116,19 @@ it("links public SPFx resources without implying sole ownership or documentation
   expect(charting.querySelectorAll("iframe").length).toBe(0);
 });
 
-it("shows Outlook end-to-end ownership and technologies without a launched claim", () => {
+it("keeps analytics generic while showing ownership, technologies, and delivery status", () => {
   render();
-  const outlook = container.querySelector("#work-outlook-analytics");
-  expect(outlook.textContent).toContain("Outlook Classic reading-time analytics");
-  expect(outlook.textContent).toContain("Near-real-time");
-  expect(outlook.textContent).toContain("new C#/.NET service and repository from scratch");
-  expect(outlook.textContent).toContain("Azure Event Hubs");
-  expect(outlook.textContent).toContain("Azure Cosmos DB");
-  expect(outlook.querySelector(".work-outcome strong").textContent).toBe("Implementation & validation");
-  expect(outlook.querySelector(".work-outcome").textContent).toContain("Production rollout is not confirmed");
+  const analytics = container.querySelector("#work-analytics-integration");
+  expect(analytics.querySelector("h3").textContent).toContain("3 organizations and 17 teams");
+  expect(analytics.textContent).toContain("End-to-end ownership");
+  expect(analytics.textContent).toContain("new C#/.NET service and repository from scratch");
+  expect(analytics.textContent).toContain("Azure Event Hubs");
+  expect(analytics.textContent).toContain("Azure Cosmos DB");
+  expect(analytics.textContent).not.toContain("reading-time");
+  expect(analytics.textContent).not.toContain("dwell");
+  expect(analytics.textContent).not.toContain("Outlook");
+  expect(analytics.querySelector(".work-outcome strong").textContent).toBe("Implementation & validation");
+  expect(analytics.querySelector(".work-outcome").textContent).toContain("Production rollout is not confirmed");
 });
 
 it("covers AI-first and hackathon responsibilities separately from personal engineering assistants", () => {

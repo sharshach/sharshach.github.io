@@ -22,15 +22,15 @@
     ]
   },
   {
-    "id": "outlook-analytics",
-    "title": "Outlook Classic reading-time analytics, end to end.",
-    "summary": "Near-real-time event ingestion for Engage analytics.",
-    "problem": "Engage analytics needed reading-time, or dwell, signals from Outlook Classic so activity in that experience could be represented more completely.",
-    "contribution": "I owned the effort end to end: designed and built a new C#/.NET service and repository from scratch, implemented event-driven ingestion, coordinated partner integration across organizations and teams, and pursued staged validation and observability. My work included Azure Event Hubs and Azure Cosmos DB, alongside design alignment and integration ownership.",
+    "id": "analytics-integration",
+    "title": "Analytics across 3 organizations and 17 teams.",
+    "summary": "End-to-end ownership of a new service and partner integration.",
+    "problem": "Product analytics needed more complete coverage across usage surfaces and partner-owned systems.",
+    "contribution": "I owned the effort from design through implementation and staged validation. I created a new C#/.NET service and repository from scratch, implemented event-driven ingestion with Azure Event Hubs and Azure Cosmos DB, and coordinated integration across 3 organizations and 17 teams.",
     "outcomeLabel": "Implementation & validation",
-    "outcome": "Service development, partner integration, and staged validation. Production rollout is not confirmed here.",
-    "judgment": "An integration is more than moving events. Clear ownership, observable behavior, and validation across partner boundaries are part of the design.",
-    "focus": ["C# / .NET", "Azure Event Hubs", "Azure Cosmos DB", "Event-driven integration", "Observability", "End-to-end ownership"]
+    "outcome": "New service and partner integration built, with staged validation. Production rollout is not confirmed.",
+    "judgment": "The central challenge was aligning dependencies and validation across teams while maintaining a single accountable owner for the integration.",
+    "focus": ["C# / .NET", "Azure Event Hubs", "Azure Cosmos DB", "Event-driven integration", "Cross-organization coordination", "End-to-end ownership"]
   },
   {
     "id": "product-judgment",

@@ -19,6 +19,9 @@ browser storage is available. The opening introduction and professional overview
 are complete viewport-sized sections when the content fits. They grow naturally
 on smaller screens and at increased text sizes; there is no scroll trapping or
 mandatory snapping. Essential career information never waits for the terminal.
+On desktop, the name and role span the opening scene above a 40% profile-text /
+60% terminal split. Major sections use subtly distinct full-width backgrounds
+in both themes; smaller screens keep the identity above the stacked content.
 
 ## Updating public content
 
@@ -35,7 +38,7 @@ Verify role dates, public repository links, contributions, and outcome claims
 before editing. Keep employer experience separate from personal projects; do not
 publish confidential implementation details, metrics, or unapproved assets.
 The CV link uses the Google Drive URL supplied by the user; no PDF asset is
-copied into this repository. Earlier projects are labeled archival. Outlook
+copied into this repository. Earlier projects are labeled archival. Cross-product
 analytics is presented as implementation and staged validation, not a confirmed
 production rollout. Technology skills are named without exposing internal
 topology or data contracts, and prototypes remain distinct from shipped work.

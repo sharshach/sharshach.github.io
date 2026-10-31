@@ -4,7 +4,7 @@ import "./Contact.css";
 
 export default function Contact() {
   return (
-    <section id="contact" className="section contact" aria-labelledby="contact-title">
+    <section id="contact" className="section page-block contact" aria-labelledby="contact-title">
       <div>
         <h2 id="contact-title">Let's talk engineering.</h2>
         <p>For engineering conversations, collaboration, or professional opportunities,

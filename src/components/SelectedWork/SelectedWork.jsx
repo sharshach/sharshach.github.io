@@ -4,7 +4,7 @@ import "./selected-work.css";
 
 export default function SelectedWork() {
     return (
-        <section id="work" className="section selected-work" aria-labelledby="work-title">
+        <section id="work" className="section page-block selected-work" aria-labelledby="work-title">
             <div className="work-heading">
                 <h2 id="work-title">The work.<br />The decisions behind it.</h2>
                 <p className="section-intro">Selected experience at Microsoft.

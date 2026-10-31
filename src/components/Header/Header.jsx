@@ -9,9 +9,11 @@ export default function Header() {
         <header className="header-main" id="top">
             <Navigation />
             <div className="hero">
-                <div className="hero-copy">
+                <div className="hero-identity">
                     <h1>{profile.name}</h1>
                     <p className="hero-role">{profile.role}</p>
+                </div>
+                <div className="hero-copy">
                     <p className="hero-headline">{profile.headline}</p>
                     <p className="hero-intro">{profile.intro}</p>
                     <div className="hero-actions">

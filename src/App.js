@@ -79,7 +79,7 @@ class App extends React.Component {
           </div>
         </section>
         <SelectedWork />
-        <section id="team" className="section team-section" aria-labelledby="team-title">
+        <section id="team" className="section page-block team-section" aria-labelledby="team-title">
           <h2 id="team-title">AI-first teams.<br />Practical innovation.</h2>
           <div>
             <article className="team-story">
@@ -119,7 +119,7 @@ class App extends React.Component {
             </article>
           </div>
         </section>
-        <section id="automations" className="section automations-section" aria-labelledby="automations-title">
+        <section id="automations" className="section page-block automations-section" aria-labelledby="automations-title">
           <div className="automation-heading">
             <h2 id="automations-title">Personal engineering assistants.</h2>
             <div>

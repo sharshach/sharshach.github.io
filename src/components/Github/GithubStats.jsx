@@ -6,7 +6,7 @@ import "./github-stats.css";
 
 export default function GithubStats() {
     return (
-        <section id="github" className="section personal-projects" aria-labelledby="projects-title">
+        <section id="github" className="section page-block personal-projects" aria-labelledby="projects-title">
             <h2 id="projects-title">Earlier experiments. Still part of the story.</h2>
             <p className="section-intro">Personal projects from college and research.
                 Kept here as a record of building and learning, separate from my work at Microsoft.</p>

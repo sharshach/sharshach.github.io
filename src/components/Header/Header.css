@@ -12,11 +12,12 @@
 .navigation-links { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 .App .navigation-link { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); text-decoration: none; font-size: 15px; }
 .App .navigation-link:hover { color: var(--text); text-decoration: underline; }
-.hero { width: min(1200px, calc(100% - 96px)); margin: 0 auto; flex: 1; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: center; gap: 64px; padding: 32px 0; }
+.hero { width: min(1200px, calc(100% - 96px)); margin: 0 auto; flex: 1; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); grid-template-rows: auto auto; align-content: center; align-items: center; gap: 24px 48px; padding: 32px 0; }
+.hero-identity { grid-column: 1 / -1; min-width: 0; text-align: center; }
+.hero-identity h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 52px; line-height: 1.12; letter-spacing: -0.025em; }
 .hero > .terminal { min-width: 0; }
 .hero-copy { min-width: 0; text-align: left; }
-.hero-copy h1 { margin: 0; max-width: 14ch; font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 52px; line-height: 1.12; letter-spacing: -0.025em; }
-.hero-role { margin: 12px 0 0; color: var(--muted); font-size: 17px; }
+.hero-role { margin: 10px 0 0; color: var(--muted); font-size: 17px; line-height: 1.4; }
 .hero-headline { margin: 20px 0 16px; font-size: 24px; line-height: 1.4; max-width: 30ch; }
 .hero-intro { margin: 0; color: var(--muted); font-size: 16px; max-width: 65ch; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; }
@@ -34,7 +35,7 @@
   background-color: #321127;
   width: 800px;
   height: 620px;
-  height: clamp(320px, calc(100svh - 240px), 620px);
+  height: clamp(320px, calc(100svh - 270px), 620px);
   max-width: 100%;
   font-size: 17px;
   line-height: 1.6;
@@ -61,9 +62,9 @@
   .navigation, .hero { width: calc(100% - 64px); }
   .navigation { gap: 20px; padding-right: 44px; }
   .navigation-links { gap: 4px 16px; }
-  .hero-copy h1 { font-size: 46px; }
+  .hero-identity h1 { font-size: 46px; }
   .hero { grid-template-columns: 1fr; gap: 40px; }
-  .hero-copy, .hero > .terminal { width: 100%; max-width: 680px; justify-self: center; }
+  .hero-identity, .hero-copy, .hero > .terminal { width: 100%; max-width: 680px; justify-self: center; }
   .terminal { font-size: 15px; }
 }
 @media (max-width: 600px) {
@@ -71,7 +72,7 @@
   .navigation { align-items: flex-start; flex-direction: column; padding: 22px 0 0; gap: 12px; }
   .navigation-links { gap: 0 18px; }
   .hero { padding: 28px 0 24px; gap: 22px; }
-  .hero-copy h1 { font-size: 38px; }
+  .hero-identity h1 { font-size: 32px; }
   .hero-role { font-size: 16px; }
   .hero-headline { font-size: 22px; }
   .terminal { height: clamp(300px, calc(100svh - 280px), 500px); font-size: 13px; }
