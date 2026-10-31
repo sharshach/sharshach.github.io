@@ -29,7 +29,7 @@ export default class Terminal extends Component {
             case "projects":
                 return <span>Earlier personal work: JobStocker and an academic credential-verification concept.<br /><a href="#github">Explore public projects</a> · <a href={profile.github}>GitHub</a></span>;
             case "study":
-                return <span>B.Tech, Computer Science<br />NIT Durgapur · 2018–2022</span>;
+                return <span>B.Tech in Computer Science and Engineering<br />NIT Durgapur · 2018–2022</span>;
             case "contact":
                 return <span><a href={`mailto:${profile.email}`}>{profile.email}</a><br /><a href={profile.linkedin}>LinkedIn</a> · <a href={profile.github}>GitHub</a></span>;
             case "resume":

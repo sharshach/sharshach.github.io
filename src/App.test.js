@@ -46,6 +46,7 @@ it("makes current identity, experience, projects and contact readable immediatel
   expect(container.querySelector("#jobs").textContent).toContain("July 2022–February 2025");
   expect(container.querySelectorAll(".job").length).toBe(5);
   expect(container.querySelector("#jobs").textContent).toContain("Viva Engage from November 2025");
+  expect(container.querySelector("#jobs").textContent).toContain("B.Tech in Computer Science and Engineering");
   expect(container.querySelector("#contact").textContent).toContain("sharshach@gmail.com");
   expect(container.querySelectorAll('a[href*="drive.google.com"]').length).toBe(0);
   expect(container.querySelectorAll('a[href="mailto:sharshach@gmail.com?subject=Resume%20request"]').length).toBe(2);
@@ -81,6 +82,7 @@ it("toggles the full site with a native button and saves the preference", () => 
   expect(storage.setItem).toHaveBeenCalledWith("portfolio-theme", "light");
   expect(container.querySelector(".terminal")).toBe(terminal);
   expect(terminal.textContent).toContain("NIT Durgapur");
+  expect(terminal.textContent).toContain("B.Tech in Computer Science and Engineering");
 });
 
 it("keeps the theme working and reports unavailable preference storage", () => {
