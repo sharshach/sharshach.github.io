@@ -56,32 +56,46 @@ class App extends React.Component {
 
   renderHome = () => (
     <div>
-      <Header theme={this.state.theme} onChangeTheme={this.onChangeTheme} />
+      <Header />
       <main id="main-content" tabIndex="-1">
-        <section className="section about-section" id="about" aria-labelledby="about-title">
-          <h2 id="about-title">How I approach engineering</h2>
-          <div className="about-copy">
-            <p>
-              I like the point where product needs meet engineering trade-offs:
-              understanding what matters to users, choosing a practical design,
-              and making it work across the boundaries of a real system.
-            </p>
-            <p>
-              I value evidence-based discussions, accessible experiences, and collaboration
-              that helps others deliver independently. Mentoring, reviews, and technical
-              learning are part of that work, not separate from it.
-            </p>
+        <section className="experience-screen" id="about" aria-labelledby="about-title">
+          <div className="experience-layout section">
+            <div className="experience-intro">
+              <h2 id="about-title">Useful platforms.<br />Dependable experiences.</h2>
+              <p className="experience-lead">
+                I design developer APIs, deliver cross-platform product features,
+                and work across team boundaries to improve everyday product reliability.
+              </p>
+              <p>
+                At Microsoft, my work has grown from mobile product quality to
+                reusable developer capabilities, pragmatic integrations, and AI-enabled
+                experiences. I care about the decisions that make a feature
+                understandable, accessible, and maintainable—not just implemented.
+              </p>
+              <a className="experience-next" href="#work">See the work behind that <span aria-hidden="true">↗</span></a>
+            </div>
+            <Jobs />
           </div>
         </section>
         <SelectedWork />
-        <Jobs />
+        <section className="section team-section" aria-labelledby="team-title">
+          <h2 id="team-title">Making the team stronger.</h2>
+          <div>
+            <p>I mentor new joiners, review designs and code, and help teammates
+              navigate technical decisions. I also co-led hands-on AI learning
+              and built personal and team automations for repetitive preparation
+              and coordination.</p>
+            <p className="muted">Some workflows are in use; others remain experiments.
+              Generated output still needs evaluation, useful context, and someone
+              accountable for the result.</p>
+          </div>
+        </section>
         <GithubStats />
         <Contact />
       </main>
       <footer className="site-footer section">
         <a href="#top">Back to top</a>
-        <p>Employer experience is described at a high level. No confidential code,
-          customer data, or internal designs are published here.</p>
+        <p>Sri Harsha Chilukuri</p>
       </footer>
     </div>
   );

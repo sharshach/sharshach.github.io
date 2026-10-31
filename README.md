@@ -8,16 +8,22 @@ Built with the existing React / Create React App toolchain.
 Run `npm ci`, then `npm start`. Run `CI=true npm test -- --watch=false --runInBand`
 for the regression suite, and `npm run build` for the production bundle.
 
-The terminal accepts the listed portfolio commands only; it does not execute code.
+The terminal retains the original read-only, animated introduction and command
+sequence. It is not an interactive shell. Its authored content and links are
+current; the original pause/reveal timing, prompt, purple surface, and title bar
+are preserved. Reduced-motion users receive the complete transcript immediately,
+and its timers are canceled on unmount.
 The theme switch supports click, Enter / Space, and a downward pull. Themes apply
 to the whole site, start from the system preference, and persist locally when
-browser storage is available. Essential career information is readable without
-using the terminal.
+browser storage is available. The opening introduction and professional overview
+are complete viewport-sized sections when the content fits. They grow naturally
+on smaller screens and at increased text sizes; there is no scroll trapping or
+mandatory snapping. Essential career information never waits for the terminal.
 
 ## Updating public content
 
 Identity and contact links live in `src/data/profile.json`, the confirmed timeline
-in `jobs.json`, and high-level employer experience in `experience.json`.
+in `jobs.json`, and selected employer experience in `experience.json`.
 `github-stats.json` is a curated list of earlier public projects, not a live stats
 feed. Project notes and legacy route entries live in `project.json`.
 

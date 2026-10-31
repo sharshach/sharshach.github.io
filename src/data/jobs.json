@@ -4,34 +4,34 @@
     "name": "Microsoft",
     "role": "Software Engineer II",
     "period": "March 2025–Present",
-    "description": "Promoted in March 2025. Viva Connections through October 2025; Viva Engage from November 2025. Cross-team product work, AI-enabled experiences, and engineering assistance."
+    "description": "Viva Engage from November 2025; previously Viva Connections."
   },
   {
     "id": "microsoft-engineer",
     "name": "Microsoft",
     "role": "Software Engineer",
     "period": "July 2022–February 2025",
-    "description": "Viva Connections. Developer-facing capabilities, cross-platform product quality, reliability, and accessible mobile interaction."
+    "description": "Viva Connections · developer platforms and mobile product quality."
   },
   {
     "id": "microsoft-intern-2022",
     "name": "Microsoft",
     "role": "Software Engineering Intern",
     "period": "2022",
-    "description": "Built a reusable onboarding component and contributed to accessibility and testing. A building block, not the complete onboarding journey."
+    "description": "Reusable onboarding components, accessibility, and testing."
   },
   {
     "id": "microsoft-intern-2021",
     "name": "Microsoft",
     "role": "Software Engineering Intern",
     "period": "2021",
-    "description": "Compared approaches to searching cached, structured information. Produced a prototype and recommendation, not a completed production feature."
+    "description": "Cached-search research and prototyping."
   },
   {
     "id": "education",
     "name": "NIT Durgapur",
     "role": "B.Tech in Computer Science and Engineering",
     "period": "2018–2022",
-    "description": "Earlier programming-club leadership and teaching continue to shape how I support teammates."
+    "description": "Programming-club leadership and teaching."
   }
 ]

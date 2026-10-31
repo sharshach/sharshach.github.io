@@ -4,16 +4,15 @@ import "./jobs.css";
 
 export default function Jobs() {
   return (
-    <section id="jobs" className="section jobs" aria-labelledby="jobs-title">
-      <h2 id="jobs-title">Experience &amp; education</h2>
-      <p className="section-intro">Full-time at Microsoft since July 2022, following two separate internships.</p>
+    <section id="jobs" className="jobs" aria-labelledby="jobs-title">
+      <h3 id="jobs-title">Experience &amp; education</h3>
       <ol className="jobs-list">
         {jobs.map(job => (
           <li className="job" key={job.id}>
-            <p className="job-period">{job.period}</p>
             <div>
-              <h3>{job.role} <span className="job-company">· {job.name}</span></h3>
-              <p>{job.description}</p>
+              <h4>{job.role} <span className="job-company">· {job.name}</span></h4>
+              <p className="job-period">{job.period}</p>
+              <p className="job-description">{job.description}</p>
             </div>
           </li>
         ))}

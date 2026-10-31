@@ -7,9 +7,9 @@ import "./github-stats.css";
 export default function GithubStats() {
     return (
         <section id="github" className="section personal-projects" aria-labelledby="projects-title">
-            <h2 id="projects-title">Personal projects</h2>
-            <p className="section-intro">A small selection of earlier public work, separate from
-                employer experience. These are archival explorations, not claims of current adoption.</p>
+            <h2 id="projects-title">Earlier experiments. Still part of the story.</h2>
+            <p className="section-intro">Personal projects from college and research.
+                Kept here as a record of building and learning, separate from my work at Microsoft.</p>
             <div className="public-project-list">
                 {data.map(item => (
                     <article className="public-project" key={item.id}>

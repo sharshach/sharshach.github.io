@@ -1,26 +1,32 @@
 [
   {
-    "title": "Developer capabilities across web and mobile",
-    "summary": "Reusable visualization capabilities with a coherent experience across platforms.",
-    "contribution": "I contributed API and feature design, cross-platform consistency, rendering, validation, and developer guidance alongside other engineers.",
-    "lesson": "A shared abstraction should preserve meaningful behavior, with compatibility and accessible use considered alongside visual output."
+    "id": "developer-platforms",
+    "title": "Designing APIs other developers can build on.",
+    "summary": "Charting capabilities across web and mobile.",
+    "problem": "Developers needed reusable visualization capabilities without a different integration model for each platform.",
+    "contribution": "I contributed API and type-contract design, shared presentation logic, web rendering, and cross-platform consistency. I worked with other engineers and design partners on layouts, data scenarios, accessibility, localization, and theme behavior.",
+    "outcome": "Delivered developer-facing charting capabilities and integration guidance across web and mobile.",
+    "judgment": "Reuse is valuable when it preserves a coherent experience—not simply when it reduces the amount of code.",
+    "focus": ["API design", "Cross-platform delivery", "Developer guidance"]
   },
   {
-    "title": "Dependable mobile experiences",
-    "summary": "Telemetry-led investigation and partner collaboration to improve routine product use.",
-    "contribution": "I worked on investigation, monitoring, accessible interaction, and recovery behavior, collaborating with partner engineers on fixes.",
-    "lesson": "Reproducible scenarios make disagreement constructive. Validate the measurements and test failure states, not just the normal path."
+    "id": "product-judgment",
+    "title": "Finding the simpler path to a shipped feature.",
+    "summary": "Pragmatic product design and cross-team delivery.",
+    "problem": "A content-sharing feature began with a more complex integration approach than the user task required.",
+    "contribution": "I investigated the options, helped identify a simpler approach, aligned it with the product's interaction model, refined the interface, and coordinated delivery with partner teams.",
+    "outcome": "Contributed to delivery through general availability while removing an unnecessary integration dependency.",
+    "judgment": "The useful design question is often what does not need to be built. Simplifying the path should preserve the scope users actually need.",
+    "focus": ["Engineering judgment", "Integration design", "Product delivery"]
   },
   {
-    "title": "AI-enabled product integration",
-    "summary": "Making useful AI capabilities fit familiar workflows.",
-    "contribution": "My work spans mobile interaction components and product integration, with design and partner teams. I focus on the user task and a practical delivery path.",
-    "lesson": "Adapt an implementation to its platform and make ownership clear. Experiments, validation, and shipped features are different stages."
-  },
-  {
-    "title": "Engineering assistance and team enablement",
-    "summary": "Less repetitive preparation. More useful context for engineers.",
-    "contribution": "I built personal and team automations and early engineering-tool experiments, supported hands-on AI learning, and mentored teammates.",
-    "lesson": "Generated output still needs evaluation. Useful workflows need feedback, maintained context, and clear ownership."
+    "id": "reliability",
+    "title": "Turning measurements into dependable experiences.",
+    "summary": "Mobile reliability, accessible interaction, and partner ownership.",
+    "problem": "User-visible failures crossed code-ownership boundaries, and the measurements themselves needed validation.",
+    "contribution": "I investigated failures, built monitoring views, coordinated fixes with partner engineers, and guided a small reliability workstream. Alongside that work, I delivered loading and recovery interactions and addressed accessibility gaps.",
+    "outcome": "Contributed shipped mobile-quality improvements and monitoring that supported ongoing reliability work.",
+    "judgment": "Reproducible user scenarios make disagreement constructive. Test delayed content, recovery, and different input methods—not just the normal path.",
+    "focus": ["Reliability", "Accessible interaction", "Cross-team coordination"]
   }
 ]
