@@ -36,6 +36,9 @@ it("makes professional identity and the complete experience readable without ani
   render();
   expect(container.querySelector("h1").textContent).toBe("Sri Harsha Chilukuri");
   expect(container.querySelector(".hero-role").textContent).toBe("Software Engineer II at Microsoft");
+  expect(container.querySelector(".hero-copy .hero-headline").textContent).toContain("useful platforms");
+  expect(container.querySelector(".hero-copy .hero-intro").textContent).toContain("AI-assisted engineering");
+  expect(container.querySelector(".hero-copy .hero-actions")).not.toBeNull();
   expect(container.querySelector("#about").textContent).toContain("I design developer APIs");
   expect(container.querySelector("#jobs").textContent).toContain("March 2025–Present");
   expect(container.querySelector("#jobs").textContent).toContain("July 2022–February 2025");

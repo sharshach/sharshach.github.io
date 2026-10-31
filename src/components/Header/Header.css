@@ -12,14 +12,17 @@
 .navigation-links { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 .App .navigation-link { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); text-decoration: none; font-size: 15px; }
 .App .navigation-link:hover { color: var(--text); text-decoration: underline; }
-.hero { width: min(1200px, calc(100% - 96px)); margin: 0 auto; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 16px 0 32px; }
-.hero-copy { text-align: center; }
-.hero-copy h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 56px; line-height: 1.12; letter-spacing: -0.025em; }
-.hero-role { margin: 12px 0 0; color: var(--muted); font-size: 18px; }
-.hero-actions { width: 800px; max-width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; }
+.hero { width: min(1200px, calc(100% - 96px)); margin: 0 auto; flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 64px; padding: 32px 0; }
+.hero > .terminal { min-width: 0; }
+.hero-copy { min-width: 0; text-align: left; }
+.hero-copy h1 { margin: 0; max-width: 14ch; font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 52px; line-height: 1.12; letter-spacing: -0.025em; }
+.hero-role { margin: 12px 0 0; color: var(--muted); font-size: 17px; }
+.hero-headline { margin: 20px 0 16px; font-size: 24px; line-height: 1.4; max-width: 30ch; }
+.hero-intro { margin: 0; color: var(--muted); font-size: 16px; max-width: 65ch; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; }
 .hero-next { display: inline-flex; align-items: center; min-height: 44px; gap: 16px; font-weight: 600; text-decoration: none; }
 .hero-next span { font-size: 24px; }
-.hero-socials { font-size: 15px; }
+.hero-socials { margin-top: 8px; font-size: 15px; }
 
 .terminal {
   --terminal-text: #f5edf3;
@@ -59,6 +62,8 @@
   .navigation { gap: 20px; padding-right: 44px; }
   .navigation-links { gap: 4px 16px; }
   .hero-copy h1 { font-size: 46px; }
+  .hero { grid-template-columns: 1fr; gap: 40px; }
+  .hero-copy, .hero > .terminal { width: 100%; max-width: 680px; justify-self: center; }
   .terminal { font-size: 15px; }
 }
 @media (max-width: 600px) {
@@ -68,7 +73,6 @@
   .hero { padding: 28px 0 24px; gap: 22px; }
   .hero-copy h1 { font-size: 38px; }
   .hero-role { font-size: 16px; }
+  .hero-headline { font-size: 22px; }
   .terminal { height: clamp(280px, calc(100svh - 350px), 420px); font-size: 13px; }
-  .hero-actions { flex-direction: column; align-items: center; gap: 4px; }
-  .hero-socials { justify-content: center; }
 }
