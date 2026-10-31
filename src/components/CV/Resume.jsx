@@ -9,9 +9,9 @@ export default class Resume extends React.Component {
   render() {
     return (
         <div className="resume-main">
-            <div className="resume-heading">Resume</div>
+            <div className="resume-heading">CV</div>
             <a href={profile.resume} className="resume-link">
-                Request resume
+                View CV
             </a>
       </div>
     );

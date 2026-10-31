@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="contact-links">
         <a href={profile.linkedin}>LinkedIn</a>
         <a href={profile.github}>GitHub</a>
-        <a href={profile.resume}>Request resume</a>
+        <a href={profile.resume}>View CV</a>
       </div>
     </section>
   );

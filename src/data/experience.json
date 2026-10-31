@@ -1,13 +1,36 @@
 [
   {
     "id": "developer-platforms",
-    "title": "Designing APIs other developers can build on.",
-    "summary": "Charting capabilities across web and mobile.",
-    "problem": "Developers needed reusable visualization capabilities without a different integration model for each platform.",
-    "contribution": "I contributed API and type-contract design, shared presentation logic, web rendering, and cross-platform consistency. I worked with other engineers and design partners on layouts, data scenarios, accessibility, localization, and theme behavior.",
-    "outcome": "Delivered developer-facing charting capabilities and integration guidance across web and mobile.",
+    "title": "Extensible charts for SPFx Adaptive Card Extensions.",
+    "summary": "Viva Connections data visualization across web and mobile.",
+    "problem": "Developers needed a straightforward way to configure useful charts in Adaptive Card Extensions (ACEs), with extensible APIs and consistent behavior across web and mobile.",
+    "contribution": "I owned API and type-contract design, shared label-generation logic across web and mobile, and web rendering for line and multiline charts. I then owned bar-chart APIs and rendering across both platforms. The broader feature was collaborative: I worked with other engineers and design partners on layouts, data scenarios, localization, RTL, accessibility, and theme behavior, and supported testing, developer guidance, and technical demos.",
+    "outcome": "Delivered developer-facing charting capabilities and integration guidance. I also co-presented the public feature demo on Microsoft Community Learning.",
     "judgment": "Reuse is valuable when it preserves a coherent experience—not simply when it reduces the amount of code.",
-    "focus": ["API design", "Cross-platform delivery", "Developer guidance"]
+    "focus": ["SharePoint Framework (SPFx)", "Adaptive Card Extensions", "TypeScript & API design", "Highcharts · Victory Native", "Localization, RTL & accessibility", "Cross-platform testing"],
+    "resources": [
+      {
+        "label": "Watch my community feature demo",
+        "description": "Introduction to new data visualization components for Viva Connections · Microsoft Community Learning.",
+        "url": "https://youtu.be/zBLEEF6cC7I?si=F2pEPcatW2BdtfdQ"
+      },
+      {
+        "label": "Build a Data Visualization ACE",
+        "description": "Microsoft Learn tutorial covering the public charting APIs and supported visualization types.",
+        "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/get-started/build-data-visualization-adaptive-card-extension"
+      }
+    ]
+  },
+  {
+    "id": "outlook-analytics",
+    "title": "Outlook Classic reading-time analytics, end to end.",
+    "summary": "Near-real-time event ingestion for Engage analytics.",
+    "problem": "Engage analytics needed reading-time, or dwell, signals from Outlook Classic so activity in that experience could be represented more completely.",
+    "contribution": "I owned the effort end to end: designed and built a new C#/.NET service and repository from scratch, implemented event-driven ingestion, coordinated partner integration across organizations and teams, and pursued staged validation and observability. My work included Azure Event Hubs and Azure Cosmos DB, alongside design alignment and integration ownership.",
+    "outcomeLabel": "Implementation & validation",
+    "outcome": "Service development, partner integration, and staged validation. Production rollout is not confirmed here.",
+    "judgment": "An integration is more than moving events. Clear ownership, observable behavior, and validation across partner boundaries are part of the design.",
+    "focus": ["C# / .NET", "Azure Event Hubs", "Azure Cosmos DB", "Event-driven integration", "Observability", "End-to-end ownership"]
   },
   {
     "id": "product-judgment",
@@ -17,7 +40,7 @@
     "contribution": "I investigated the options, helped identify a simpler approach, aligned it with the product's interaction model, refined the interface, and coordinated delivery with partner teams.",
     "outcome": "Contributed to delivery through general availability while removing an unnecessary integration dependency.",
     "judgment": "The useful design question is often what does not need to be built. Simplifying the path should preserve the scope users actually need.",
-    "focus": ["Engineering judgment", "Integration design", "Product delivery"]
+    "focus": ["Product & interface design", "Engineering judgment", "Integration design", "Cross-team delivery"]
   },
   {
     "id": "reliability",
@@ -27,6 +50,6 @@
     "contribution": "I investigated failures, built monitoring views, coordinated fixes with partner engineers, and guided a small reliability workstream. Alongside that work, I delivered loading and recovery interactions and addressed accessibility gaps.",
     "outcome": "Contributed shipped mobile-quality improvements and monitoring that supported ongoing reliability work.",
     "judgment": "Reproducible user scenarios make disagreement constructive. Test delayed content, recovery, and different input methods—not just the normal path.",
-    "focus": ["Reliability", "Accessible interaction", "Cross-team coordination"]
+    "focus": ["Telemetry-led investigation", "Observability", "Accessible interaction", "Loading & recovery states", "Cross-team coordination"]
   }
 ]

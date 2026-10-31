@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import GithubStats from "./components/Github/GithubStats";
 import ThemeSwitch from "./components/ThemeSwitch/ThemeSwitch";
 import SelectedWork from "./components/SelectedWork/SelectedWork";
+import automations from "./data/automations.json";
 
 class App extends React.Component {
   constructor(props) {
@@ -78,17 +79,65 @@ class App extends React.Component {
           </div>
         </section>
         <SelectedWork />
-        <section className="section team-section" aria-labelledby="team-title">
-          <h2 id="team-title">Making the team stronger.</h2>
+        <section id="team" className="section team-section" aria-labelledby="team-title">
+          <h2 id="team-title">AI-first teams.<br />Practical innovation.</h2>
           <div>
-            <p>I mentor new joiners, review designs and code, and help teammates
-              navigate technical decisions. I also co-led hands-on AI learning
-              and built personal and team automations for repetitive preparation
-              and coordination.</p>
-            <p className="muted">Some workflows are in use; others remain experiments.
-              Generated output still needs evaluation, useful context, and someone
-              accountable for the result.</p>
+            <article className="team-story">
+              <h3>AI First Champion</h3>
+              <p>I co-led practical AI adoption through hands-on tool demos,
+                individual setup and onboarding help, and reusable engineering workflows.
+                The focus was helping teammates apply the tools to real work:
+                multi-agent collaboration, spec-driven development, and useful
+                feedback—not just demonstrating that a model can generate code.</p>
+              <p>I collected feedback and supported adoption reporting for management.
+                I also explored an AI-assisted schema reviewer and a spec-driven
+                multi-repository workflow with early teammate use. These were
+                prototypes and practical experiments, not an organization-wide
+                production standard.</p>
+              <p className="practice-skills">Skills applied: AI enablement, tool onboarding,
+                multi-agent workflows, spec-driven development, feedback and evaluation.</p>
+            </article>
+            <article className="team-story">
+              <h3>Hackathon Champion</h3>
+              <p>I identified user and workflow gaps, shaped product concepts,
+                organized ideation, and helped teammates prototype and demonstrate
+                their ideas. Experiments explored user-authored shortcuts, workflow
+                assistance, summarization, booking, intent-based navigation,
+                sharing, and advocacy.</p>
+              <p>The goal was to validate an idea and make the next product decision
+                clearer. Several experiments prompted product discussions; a working
+                demo was not treated as a launched feature, and not every innovation
+                depended on AI.</p>
+              <p className="practice-skills">Skills applied: product thinking, ideation,
+                prototyping, idea validation, technical demos, team participation.</p>
+            </article>
+            <article className="team-story">
+              <h3>Mentoring &amp; shared ownership</h3>
+              <p>I mentor new joiners, review designs and code, and help teammates
+                navigate technical decisions. I value evidence-based feedback and
+                knowledge sharing that helps others deliver independently.</p>
+            </article>
           </div>
+        </section>
+        <section id="automations" className="section automations-section" aria-labelledby="automations-title">
+          <div className="automation-heading">
+            <h2 id="automations-title">Personal engineering assistants.</h2>
+            <div>
+              <p>Automations I build and configure for my own engineering workflow,
+                sometimes shared for team use. They prepare context and first drafts;
+                I remain responsible for the decisions, reviews, and communication.</p>
+              <p className="practice-skills">Skills applied: workflow orchestration,
+                context synthesis, review automation, traceable drafts, human oversight.</p>
+            </div>
+          </div>
+          <dl className="automation-list">
+            {automations.map(automation => (
+              <div key={automation.title}>
+                <dt>{automation.title}</dt>
+                <dd>{automation.description}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
         <GithubStats />
         <Contact />

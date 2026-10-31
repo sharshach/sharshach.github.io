@@ -8,6 +8,7 @@ export default function Navigation() {
                 <a className="navigation-link" href="#about">About</a>
                 <a className="navigation-link" href="#work">Work</a>
                 <a className="navigation-link" href="#jobs">Experience</a>
+                <a className="navigation-link" href="#automations">Automations</a>
                 <a className="navigation-link" href="#github">Projects</a>
                 <a className="navigation-link" href="#contact">Contact</a>
             </div>

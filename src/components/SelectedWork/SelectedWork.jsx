@@ -17,15 +17,27 @@ export default function SelectedWork() {
                         <div className="work-subject">
                             <h3>{item.title}</h3>
                             <p className="muted">{item.summary}</p>
-                            <ul className="work-focus" aria-label="Areas of responsibility">
+                            <h4 className="work-skills-title">Skills applied</h4>
+                            <ul className="work-focus" aria-label="Skills applied">
                                 {item.focus.map(focus => <li key={focus}>{focus}</li>)}
                             </ul>
                         </div>
                         <div className="work-detail">
                             <p className="work-problem">{item.problem}</p>
                             <p>{item.contribution}</p>
-                            <p className="work-outcome"><strong>Delivered</strong>{item.outcome}</p>
+                            <p className="work-outcome"><strong>{item.outcomeLabel || "Delivered"}</strong>{item.outcome}</p>
                             <p className="work-judgment"><strong>The engineering judgment</strong>{item.judgment}</p>
+                            {item.resources && (
+                                <div className="work-resources">
+                                    <h4>Public resources</h4>
+                                    {item.resources.map(resource => (
+                                        <div className="work-resource" key={resource.url}>
+                                            <a href={resource.url}>{resource.label}<span aria-hidden="true"> ↗</span></a>
+                                            <p>{resource.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </article>
                 ))}

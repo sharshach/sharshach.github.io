@@ -18,11 +18,11 @@
 
 [data-theme="light"] {
   color-scheme: light;
-  --background: #fafafd;
-  --surface: #ededf3;
+  --background: #e8edf4;
+  --surface: #dbe3ef;
   --text: #202029;
-  --muted: #595966;
-  --line: #ceced8;
+  --muted: #4b5364;
+  --line: #b8c5d6;
   --accent: #244db2;
   --button-background: #244db2;
   --button-text: #ffffff;
@@ -79,7 +79,7 @@ html {
   --accent: #bfd4ff;
 }
 [data-theme="light"] .experience-screen {
-  background: #e6eef9;
+  background: #d5e1f0;
   --text: #172943;
   --muted: #4a5c77;
   --line: #b2c2d9;
@@ -95,6 +95,16 @@ html {
 .team-section { display: grid; grid-template-columns: 1fr 1.4fr; gap: 96px; }
 .team-section h2 { max-width: 12ch; }
 .team-section p:last-child { margin-bottom: 0; }
+.team-story + .team-story { border-top: 1px solid var(--line); padding-top: 32px; margin-top: 32px; }
+.team-story h3 { margin-bottom: 16px; }
+.practice-skills { font-size: 14px; color: var(--muted); }
+.automation-heading { display: grid; grid-template-columns: 1fr 1.4fr; gap: 96px; align-items: end; }
+.automation-heading h2 { max-width: 12ch; }
+.automation-heading > div > p { margin-bottom: 12px; }
+.automation-list { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 64px; margin: 32px 0 0; }
+.automation-list > div { border-top: 1px solid var(--line); padding-top: 24px; }
+.automation-list dt { font-size: 22px; line-height: 1.35; font-weight: 600; margin-bottom: 12px; }
+.automation-list dd { margin: 0; max-width: 65ch; color: var(--muted); }
 .muted { color: var(--muted); }
 
 .button-link {
@@ -137,6 +147,8 @@ html {
   .experience-layout { gap: 40px; padding: 56px 0; }
   .experience-intro h2 { font-size: 40px; }
   .team-section { gap: 40px; }
+  .automation-heading { gap: 40px; }
+  .automation-list { gap: 28px 40px; }
 }
 
 @media (max-width: 600px) {
@@ -147,6 +159,9 @@ html {
   .experience-intro .experience-lead { font-size: 19px; }
   .team-section { display: block; }
   .team-section h2 { max-width: none; }
+  .automation-heading { grid-template-columns: 1fr; gap: 8px; }
+  .automation-heading h2 { max-width: none; }
+  .automation-list { grid-template-columns: 1fr; }
   .site-footer { flex-direction: column; gap: 12px; padding: 28px 0; }
 }
 

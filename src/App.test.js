@@ -52,11 +52,11 @@ it("makes professional identity and the complete experience readable without ani
 
 it("shows responsibility, outcomes, and engineering judgment without invented metrics", () => {
   render();
-  expect(container.querySelectorAll(".work-item").length).toBe(3);
+  expect(container.querySelectorAll(".work-item").length).toBe(4);
   expect(container.querySelector("#work-developer-platforms").textContent).toContain("API and type-contract design");
   expect(container.querySelector("#work-product-judgment").textContent).toContain("delivery through general availability");
   expect(container.querySelector("#work-reliability").textContent).toContain("guided a small reliability workstream");
-  expect(container.querySelector(".team-section").textContent).toContain("others remain experiments");
+  expect(container.querySelector(".team-section").textContent).toContain("prototypes and practical experiments");
 });
 
 it("preserves the original terminal instead of introducing an interactive shell", () => {
@@ -83,14 +83,55 @@ it("keeps original terminal content mounted while changing the page theme", () =
   expect(terminal.textContent).toBe(content);
 });
 
-it("keeps public projects separate and preserves current resume-request links", () => {
+it("keeps public projects separate and uses the CV link supplied by the user", () => {
   render();
   expect(container.querySelectorAll(".public-project").length).toBe(2);
   expect(container.querySelector("#github").textContent).toContain("record of building and learning");
   expect(container.querySelector("#github").textContent).toContain("not an institutional deployment");
   expect(container.querySelector("#contact").textContent).toContain("sharshach@gmail.com");
-  expect(container.querySelectorAll('a[href*="drive.google.com"]').length).toBe(0);
-  expect(container.querySelectorAll('a[href="mailto:sharshach@gmail.com?subject=Resume%20request"]').length).toBe(2);
+  const cvLinks = container.querySelectorAll('a[href="https://drive.google.com/file/d/16Jd6EdoW-pBH0ogppZTt0oN6Is6fL5dI/view?usp=drive_link"]');
+  expect(cvLinks.length).toBe(2);
+  expect(cvLinks[0].textContent).toBe("View CV");
+  expect(container.querySelectorAll('a[href="mailto:sharshach@gmail.com?subject=Resume%20request"]').length).toBe(0);
+});
+
+it("links public SPFx resources without implying sole ownership or documentation authorship", () => {
+  render();
+  const charting = container.querySelector("#work-developer-platforms");
+  expect(charting.textContent).toContain("SPFx Adaptive Card Extensions");
+  expect(charting.textContent).toContain("Highcharts");
+  expect(charting.textContent).toContain("Victory Native");
+  expect(charting.textContent).toContain("co-presented");
+  expect(charting.querySelector('a[href="https://youtu.be/zBLEEF6cC7I?si=F2pEPcatW2BdtfdQ"]')).not.toBeNull();
+  expect(charting.querySelector('a[href="https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/get-started/build-data-visualization-adaptive-card-extension"]')).not.toBeNull();
+  expect(charting.querySelectorAll("iframe").length).toBe(0);
+});
+
+it("shows Outlook end-to-end ownership and technologies without a launched claim", () => {
+  render();
+  const outlook = container.querySelector("#work-outlook-analytics");
+  expect(outlook.textContent).toContain("Outlook Classic reading-time analytics");
+  expect(outlook.textContent).toContain("Near-real-time");
+  expect(outlook.textContent).toContain("new C#/.NET service and repository from scratch");
+  expect(outlook.textContent).toContain("Azure Event Hubs");
+  expect(outlook.textContent).toContain("Azure Cosmos DB");
+  expect(outlook.querySelector(".work-outcome strong").textContent).toBe("Implementation & validation");
+  expect(outlook.querySelector(".work-outcome").textContent).toContain("Production rollout is not confirmed");
+});
+
+it("covers AI-first and hackathon responsibilities separately from personal engineering assistants", () => {
+  render();
+  const team = container.querySelector("#team");
+  expect(team.querySelectorAll(".team-story").length).toBe(3);
+  expect(team.textContent).toContain("AI First Champion");
+  expect(team.textContent).toContain("Hackathon Champion");
+  expect(team.textContent).toContain("not every innovation depended on AI");
+  const assistants = container.querySelector("#automations");
+  expect(assistants.querySelectorAll("dt").length).toBe(5);
+  expect(assistants.textContent).toContain("track duplicates");
+  expect(assistants.textContent).toContain("verified facts, inferences");
+  expect(assistants.textContent).toContain("does not replace final approval");
+  expect(container.querySelector('.navigation a[href="#automations"]')).not.toBeNull();
 });
 
 it("starts from the system theme and honors a saved override", () => {

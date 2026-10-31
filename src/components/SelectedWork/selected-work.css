@@ -4,13 +4,19 @@
 .work-item { display: grid; grid-template-columns: 1fr 1.4fr; gap: 96px; border-top: 1px solid var(--line); padding: 56px 0; scroll-margin-top: 32px; }
 .work-item:last-child { padding-bottom: 0; }
 .work-item .work-subject h3 { font-size: 30px; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 20px; max-width: 22ch; }
-.work-focus { list-style: none; margin: 28px 0 0; padding: 0; font-size: 14px; color: var(--muted); }
+.work-skills-title { margin: 28px 0 8px; font-size: 14px; font-weight: 600; }
+.work-focus { list-style: none; margin: 0; padding: 0; font-size: 14px; color: var(--muted); }
 .work-focus li { padding: 5px 0; }
 .work-detail p:last-child { margin-bottom: 0; }
 .work-problem { color: var(--muted); }
 .work-outcome { padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .work-outcome strong, .work-judgment strong { display: block; color: var(--accent); font-size: 14px; font-weight: 600; margin-bottom: 8px; }
 .work-judgment { color: var(--muted); font-size: 16px; }
+.work-resources { margin-top: 32px; }
+.work-resources h4 { font-size: 16px; margin: 0 0 12px; }
+.work-resource { border-top: 1px solid var(--line); padding: 16px 0; }
+.work-resource a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; }
+.work-resource p { font-size: 14px; color: var(--muted); margin: 4px 0 0; }
 @media (max-width: 900px) {
   .work-heading, .work-item { gap: 40px; }
   .work-heading h2 { font-size: 38px; }
@@ -20,5 +26,6 @@
   .work-heading, .work-item { grid-template-columns: 1fr; gap: 20px; }
   .work-heading h2 { font-size: 34px; }
   .work-item { padding: 36px 0; }
-  .work-focus { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 16px 0 0; }
+  .work-skills-title { margin-top: 20px; }
+  .work-focus { display: flex; flex-wrap: wrap; gap: 4px 18px; }
 }

@@ -24,14 +24,21 @@ mandatory snapping. Essential career information never waits for the terminal.
 
 Identity and contact links live in `src/data/profile.json`, the confirmed timeline
 in `jobs.json`, and selected employer experience in `experience.json`.
+Personal engineering-assistant examples live in `automations.json`; team
+enablement and innovation content is in `App.js`. Public SPFx resources are
+linked from the charting experience, with the community video distinguished
+from the Microsoft Learn documentation.
 `github-stats.json` is a curated list of earlier public projects, not a live stats
 feed. Project notes and legacy route entries live in `project.json`.
 
 Verify role dates, public repository links, contributions, and outcome claims
 before editing. Keep employer experience separate from personal projects; do not
 publish confidential implementation details, metrics, or unapproved assets.
-The resume link intentionally requests a current resume by email rather than
-publishing an unapproved PDF. Earlier projects are labeled archival.
+The CV link uses the Google Drive URL supplied by the user; no PDF asset is
+copied into this repository. Earlier projects are labeled archival. Outlook
+analytics is presented as implementation and staged validation, not a confirmed
+production rollout. Technology skills are named without exposing internal
+topology or data contracts, and prototypes remain distinct from shipped work.
 
 ## Publishing
 

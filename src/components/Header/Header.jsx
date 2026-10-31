@@ -16,7 +16,7 @@ export default function Header() {
                     <p className="hero-intro">{profile.intro}</p>
                     <div className="hero-actions">
                         <a className="button-link hero-next" href="#about">Explore my experience <span aria-hidden="true">↓</span></a>
-                        <a className="button-link button-link-secondary" href={profile.resume}>Request resume</a>
+                        <a className="button-link button-link-secondary" href={profile.resume}>View CV</a>
                     </div>
                     <div className="link-row hero-socials">
                         <a href={profile.linkedin}>LinkedIn</a>
