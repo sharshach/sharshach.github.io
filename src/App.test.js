@@ -131,6 +131,8 @@ it("keeps analytics generic while showing ownership, technologies, and delivery 
   expect(analytics.querySelector(".work-outcome").textContent).toContain("with staged validation");
   expect(analytics.textContent).not.toContain("Production rollout is not confirmed");
   expect(analytics.querySelector(".work-judgment").textContent).toContain("Working across organizations");
+  expect(analytics.querySelector(".work-judgment").textContent).toContain("near-real-time data ingestion");
+  expect(analytics.querySelector(".work-judgment").textContent).not.toContain("migrate");
   expect(analytics.querySelector(".work-judgment").textContent).toContain("horizontally scaled on-premises systems");
   expect(analytics.querySelector(".work-judgment").textContent).toContain("modern cloud-based systems");
 });
