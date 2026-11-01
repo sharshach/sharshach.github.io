@@ -1,79 +1,9 @@
-.jobs{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  height: fit-content;
-  width: 100vw;
-}
-.jobs-list{
-  position: relative;
-  display: flex;
-  flex-flow:row wrap;
-  justify-content: space-evenly;
-}
-.job {
-  position: relative;
-  margin: 10px;
-  float: left;
-  width: 500px;
-  height: 450px;
-  border-radius: 5px;
-  border: 1px solid White;
-  text-decoration: none;
-  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2), 0px 23px 36px 3px rgba(0,0,0,0.14), 0px 9px 44px 8px rgba(0,0,0,0.12);
-}
-@media only screen and (max-width: 600px) {
-  .job-col {
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-  .job-col {
-    width: 50%;
-  }
-}
-
-.job-company-name {
-  position: relative;
-  font-size: 40px;
-  line-height: 130px;
-  height: 170px;
-  background-color: #111111aa;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  color:white;
-}
-.job-logo-div {
-  position: absolute;
-  top:120px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  min-height: 100px;
-  margin-right:20px;
-}
-.job-logo-img {
-  width: 100px;
-  height: auto;
-  position: relative;
-  border-radius: 20px;
-}
-.job-core{
-  /* background-color: #222222; */
-  padding: 10px;
-  height: calc( 100% - 220px );
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.job-core-empty{
-  height: 50px;
-}
-.job-core-data{
-  font-size: 20px;
-}
-.job-core-data-role{
-  font-weight: bold;
-}
+.jobs { min-width: 0; scroll-margin-top: 32px; }
+.jobs #jobs-title { font-size: 24px; margin-bottom: 24px; }
+.jobs-list { list-style: none; margin: 0; padding: 0; }
+.job { padding: 18px 0; border-top: 1px solid var(--line); }
+.job:last-child { padding-bottom: 0; }
+.job h4 { font-size: 18px; line-height: 1.45; margin: 0; font-weight: 600; }
+.job .job-period { color: var(--muted); font-size: 14px; margin: 5px 0 0; }
+.job-company { color: var(--muted); font-weight: 400; }
+.job .job-description { margin: 5px 0 0; font-size: 14px; color: var(--muted); line-height: 1.5; }

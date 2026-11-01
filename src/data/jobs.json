@@ -1,62 +1,37 @@
 [
   {
-    "type": "intern",
+    "id": "microsoft-ii",
     "name": "Microsoft",
-    "logo": "microsoft-80660_640.png",
-    "locality": "Hyderabad, TS, IN",
-    "tag": "Technology company which aims to make each person and organization on the planet to achieve more",
-    "role": [
-      {
-        "name": "Software Engineer Intern",
-        "start": "Apr 2020"
-      }
-    ],
-    "curr_role":"Software Engineer Intern",
-    "start":"May 2021",
-    "end":"present",
-    "website": "https://www.microsoft.com/",
-    "background-color":"unset",
-    "border-radius":"0px"
+    "role": "Software Engineer II",
+    "period": "March 2025–Present",
+    "description": "Viva Engage from November 2025; previously Viva Connections."
   },
   {
-    "type": "club",
-    "name": "RECursion",
-    "locality": "Durgapur, WB, IN",
-    "tag": "Programming Club of NIT DURGAPUR",
-    "logo": "RECursion.png",
-    "role": [
-      {
-        "name": "Junior Coordinator",
-        "start": "Jan 2020",
-        "end": "July 2020"
-      },
-      {
-        "name": "Senior Coordinator",
-        "start": "July 2020"
-      }
-    ],
-    "curr_role":"Senior Coordinator",
-    "start":"January 2020",
-    "end":"present",
-    "website": "https://recursionnitd.in",
-    "background-color":"#2E7D32"
+    "id": "microsoft-engineer",
+    "name": "Microsoft",
+    "role": "Software Engineer",
+    "period": "July 2022–February 2025",
+    "description": "Viva Connections · developer platforms and mobile product quality."
   },
   {
-    "type": "intern",
-    "name": "WorkatTech",
-    "logo": "WAT.png",
-    "locality": "Bangalore, KA,IN",
-    "tag": "Educational Platform for future generation",
-    "role": [
-      {
-        "name": "Software Development Engineer",
-        "start": "Apr 2020"
-      }
-    ],
-    "curr_role":"Software Development Engineer Intern",
-    "start":"April 2020",
-    "end":"April 2021",
-    "website": "https://workat.tech",
-    "background-color":"unset"
+    "id": "microsoft-intern-2022",
+    "name": "Microsoft",
+    "role": "Software Engineering Intern",
+    "period": "2022",
+    "description": "Reusable onboarding components, accessibility, and testing."
+  },
+  {
+    "id": "microsoft-intern-2021",
+    "name": "Microsoft",
+    "role": "Software Engineering Intern",
+    "period": "2021",
+    "description": "Cached-search research and prototyping."
+  },
+  {
+    "id": "education",
+    "name": "NIT Durgapur",
+    "role": "B.Tech in Computer Science and Engineering",
+    "period": "2018–2022",
+    "description": "Programming-club leadership and teaching."
   }
 ]

@@ -1,41 +1,42 @@
 {
-    "ms-lists":{
-        "for":"Microsoft",
-        "title":"Microsoft Lists",
-        "start":"May 2021",
-        "end":"July 2021",
-        "description":"Microsoft Lists is a Information Management Platform",
-        "points":[
-            "Worked on implementing local search which enables search when users are in offline mode also",
-            "User Experience will be enhanced as users can work seamlessly irrespective of their network speeds.",
-            "search on complex fields are optamized enhancing the speed of search"
+    "jobstocker": {
+        "for": "Earlier college project",
+        "title": "JobStocker",
+        "description": "A collaborative progressive web app for sharing job opportunities and tracking applications.",
+        "points": [
+            "Contributed to a college-era project with a public repository.",
+            "The public implementation includes opportunity sharing and application-status updates.",
+            "Presented as earlier work, without claims of current usage, maintenance, or adoption."
         ],
-        "img": "/microsoft-80660_640.png"
+        "source": "https://github.com/JOURNEY-CP/jobstocker"
     },
-    "wat-ticketing":{
-        "for":"WorkatTech",
-        "title":"Ticketing System",
-        "start":"May 2020",
-        "end":"Sept 2020",
-        "description":"a platform used for Doubts Clarification at workat.tech",
-        "points":[
-            "Users of WorkatTech can post their doubts",
-            "A one to one interaction is arranged between Student and Teaching Assistant which initiates smooth communication for students.",
-            "Students can keep track of all the doubts and their conversations as they wont mix up with other conversations and will be on point",
-            "Allotment of  Teaching Assistant can also be made automaatically by the system"
+    "nitdgp-qrcode": {
+        "for": "Earlier research concept",
+        "title": "Academic credential verification",
+        "description": "An exploration of QR-based verification for academic documents.",
+        "points": [
+            "Explored how document information could be represented and checked through QR-based interactions.",
+            "The linked public repository is a testing website, not an official NIT Durgapur service.",
+            "This is a research concept, not evidence of institutional deployment or a security guarantee."
         ],
-        "img": "/WAT.png"
+        "source": "https://github.com/sharshach/verify-nitdgp"
     },
-    "nitdgp-qrcode":{
-        "for":"NIT Durgpur",
-        "title":"QR Code",
-        "start":"August 2021",
-        "end":"December 2021",
-        "description":"QR Code is a simple and easy to use QR code generator",
-        "points":[
-            "QR Code can be added into Academic documents like Grade Card,Degree Certificate etc. So that third Parties can Easily verify the Authenticity of Student by just scanning the QR Code.",
-            "NIT Durgapur can create And verify qr codes in different formats depending on the Requirements.",
-            "A face image of the student is also addable to the QR code Which enhances Security."
+    "ms-lists": {
+        "for": "Earlier Microsoft internship · 2021",
+        "title": "Search prototype",
+        "description": "An internship exploration of search over cached, structured information.",
+        "points": [
+            "Compared approaches and evaluated platform constraints.",
+            "Produced a prototype and a recommendation, not a completed production feature during the internship.",
+            "The general lesson: test an assumption before investing in a more elaborate implementation."
+        ]
+    },
+    "wat-ticketing": {
+        "for": "Archived portfolio entry",
+        "title": "Earlier project",
+        "description": "This older entry is not included in the current portfolio because its scope has not been reverified.",
+        "points": [
+            "See the current selected work and public projects for the refreshed professional story."
         ]
     }
 }

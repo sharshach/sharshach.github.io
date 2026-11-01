@@ -1,14 +1,17 @@
-import React, { Component } from 'react'
+import React from "react";
 
-export default class Navigation extends Component {
-    render() {
-        return (
-            <div className="navigation">
-                <a className="navigation-link" href="#jobs" >Experiences</a>
-                <a className="navigation-link" href="#github" >Projects</a>
-                <a className="navigation-link" href="https://drive.google.com/file/d/16Jd6EdoW-pBH0ogppZTt0oN6Is6fL5dI/view" target="blank" >Resume</a>
-                <div className="navigation-empty-div"></div>
+export default function Navigation() {
+    return (
+        <nav className="navigation" aria-label="Main navigation">
+            <a className="navigation-home" href="#top" aria-label="Sri Harsha Chilukuri, home">harsha<span aria-hidden="true">:~</span></a>
+            <div className="navigation-links">
+                <a className="navigation-link" href="#about">About</a>
+                <a className="navigation-link" href="#work">Work</a>
+                <a className="navigation-link" href="#jobs">Experience</a>
+                <a className="navigation-link" href="#automations">Automations</a>
+                <a className="navigation-link" href="#github">Projects</a>
+                <a className="navigation-link" href="#contact">Contact</a>
             </div>
-        )
-    }
+        </nav>
+    );
 }

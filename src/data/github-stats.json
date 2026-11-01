@@ -1,34 +1,18 @@
 [
-    {
-        "user":"sharshach",
-        "repo":"area-calculator"
-    },
-    {
-        "user":"sharshach",
-        "repo":"user_data_management"
-    },
-    {
-        "user":"sharshach",
-        "repo":"webrtc"
-    },
-    {
-        "user":"sharshach",
-        "repo":"greenmat"
-    },
-    {
-        "user":"sharshach",
-        "repo":"nitdgp-demo"
-    },
-    {
-        "user":"sharshach",
-        "repo":"MoneyGrabbers"
-    },
-    {
-        "user":"journey-cp",
-        "repo":"jobstocker"
-    },
-    {
-        "user":"journey-cp",
-        "repo":"restaurant"
-    }
+  {
+    "id": "jobstocker",
+    "title": "JobStocker",
+    "status": "Earlier college project",
+    "summary": "A collaborative progressive web app for sharing job opportunities and tracking application status.",
+    "source": "https://github.com/JOURNEY-CP/jobstocker",
+    "sourceLabel": "Public repository"
+  },
+  {
+    "id": "nitdgp-qrcode",
+    "title": "Academic credential verification",
+    "status": "Earlier research concept",
+    "summary": "An exploration of QR-based academic document verification. A testing concept, not an institutional deployment or a security guarantee.",
+    "source": "https://github.com/sharshach/verify-nitdgp",
+    "sourceLabel": "Concept repository"
+  }
 ]

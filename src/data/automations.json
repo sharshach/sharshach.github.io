@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Briefings & work-report preparation",
+    "description": "Prepare morning briefings and weekly work-report drafts so useful context is ready for me to review. The assistant prepares the material; I check and decide what to share."
+  },
+  {
+    "title": "Sprint-change summaries",
+    "description": "Turn daily sprint changes into concise team-update drafts, reducing repeated preparation while keeping the update grounded in actual changes."
+  },
+  {
+    "title": "First-pass pull request review",
+    "description": "Scan for potential review findings, track duplicates, and clearly mark AI-generated comments. This supports my review; it does not replace final approval."
+  },
+  {
+    "title": "Incident-research assistance",
+    "description": "Prepare research briefs that separate verified facts, inferences, and open questions. The workflow helps engineers gather context, not autonomously mitigate incidents."
+  },
+  {
+    "title": "Time-zone-aware partner follow-ups",
+    "description": "Prepare follow-ups and collect bounded responses for cross-team coordination, with attention to partner time zones and my oversight of the communication."
+  }
+]
